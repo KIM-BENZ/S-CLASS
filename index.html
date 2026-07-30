@@ -1,0 +1,2251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The new S-Class MY27 (BR 223M) 종합 가이드북 & 사전계약 | BenzDream</title>
+  
+  <!-- Open Graph & 메타 태그 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="THE NEW S-CLASS MY27 페이스리프트 종합 가이드 & 사전계약">
+  <meta property="og:description" content="신형 S-Class MY27 사전계약 혜택, MBUX 슈퍼스크린, 런치 에디션, 트림별 가격 및 제원 상세 옵션 매트릭스">
+  <meta property="og:image" content="https://homanhan-glitch.github.io/benzdream-approach/MY27_SClass_OG.jpg">
+  <meta property="og:site_name" content="BenzDream · 벤츠 전시장">
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7T2ECBWN0K"></script>
+  <script>
+    const BLOCKED_IPS = ["59.7.219.188"];
+    fetch("https://api.ipify.org?format=json")
+      .then(r => r.json())
+      .then(d => {
+        if (BLOCKED_IPS.includes(d.ip)) return;
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "G-7T2ECBWN0K");
+      })
+      .catch(() => {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "G-7T2ECBWN0K");
+      });
+  </script>
+
+  <style>
+    /* =========================================================
+       1. 디자인 시스템 & 폰트 설정
+       ========================================================= */
+    @font-face {
+      font-family: 'MBK CorpoA';
+      src: url('fonts/MBKCorpoA.woff2') format('woff2');
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'MBK CorpoS Light';
+      src: url('fonts/MBKCorporateSLight.woff2') format('woff2');
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'MBK CorpoA Cond';
+      src: url('fonts/MBKCorporateACon.woff2') format('woff2');
+      font-display: swap;
+    }
+
+    :root {
+      --dark: #08090e;
+      --navy: #0e1018;
+      --card: #141720;
+      --card2: #1a1e2c;
+      --gold: #c9a96e;
+      --gold-light: #ddc08a;
+      --gold-dim: #8a7a50;
+      --silver: #a8aab0;
+      --light: #e2e3e7;
+      --white: #f5f5f7;
+      --border: rgba(255, 255, 255, 0.08);
+      --limited: #e11d48;
+      --green-up: #22c55e;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'MBK CorpoS Light', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+      background-color: var(--dark);
+      color: var(--light);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Sticky Header */
+    header {
+      background-color: rgba(8, 9, 14, 0.92);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(12px);
+    }
+
+    header .brand {
+      font-family: 'MBK CorpoA', serif;
+      font-size: 1.1rem;
+      letter-spacing: 3px;
+      color: var(--white);
+    }
+
+    .advisor-info {
+      font-size: 0.88rem;
+      color: var(--silver);
+    }
+
+    .advisor-info span {
+      color: var(--gold);
+      font-weight: 600;
+      margin-left: 0.4rem;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: clamp(50px, 6vw, 85px) 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sec-label {
+      font-family: 'MBK CorpoA', serif;
+      font-size: 0.72rem;
+      color: var(--gold);
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .sec-title {
+      font-family: 'MBK CorpoA Cond', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--white);
+      margin-bottom: 12px;
+      line-height: 1.2;
+      font-weight: 400;
+    }
+
+    .sec-desc {
+      font-size: 0.95rem;
+      color: var(--silver);
+      max-width: 800px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    /* =========================================================
+       2. HERO SECTION
+       ========================================================= */
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.85;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(8,9,14,0.98) 0%, rgba(8,9,14,0.5) 40%, transparent 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 60px 0;
+      max-width: 950px;
+    }
+
+    .hero-badge {
+      font-family: 'MBK CorpoA', serif;
+      font-size: 0.75rem;
+      color: var(--gold);
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-family: 'MBK CorpoA Cond', serif;
+      font-size: clamp(2.8rem, 6vw, 4.8rem);
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--silver);
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+      font-weight: 300;
+    }
+
+    /* Pre-Order Banner */
+    .preorder-card {
+      background: linear-gradient(135deg, rgba(201,169,110,0.15), rgba(201,169,110,0.03));
+      border: 1px solid rgba(201,169,110,0.35);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    .po-core-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+    }
+
+    .po-item {
+      border-right: 1px solid rgba(201,169,110,0.2);
+      padding-right: 1rem;
+    }
+
+    .po-item:last-child {
+      border-right: none;
+    }
+
+    .po-label {
+      font-family: 'MBK CorpoA', serif;
+      font-size: 0.72rem;
+      color: var(--gold);
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+
+    .po-val {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .po-sub {
+      font-size: 0.82rem;
+      color: var(--silver);
+    }
+
+    /* =========================================================
+       3. UPGRADE HIGHLIGHT (5가지 프레임)
+       ========================================================= */
+    .upgrade-banner {
+      background: linear-gradient(145deg, #181c28 0%, #0e1018 100%);
+      border: 1px solid rgba(201, 169, 110, 0.4);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 2.5rem;
+      margin-top: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .upgrade-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--gold-light), var(--gold-dim));
+    }
+
+    .upgrade-header {
+      margin-bottom: 2rem;
+    }
+
+    .upgrade-header-tag {
+      display: inline-block;
+      background: rgba(201, 169, 110, 0.15);
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      font-size: 0.75rem;
+      font-family: 'MBK CorpoA', serif;
+      padding: 4px 12px;
+      border-radius: 20px;
+      letter-spacing: 2px;
+      margin-bottom: 0.6rem;
+    }
+
+    .upgrade-header-title {
+      color: var(--white);
+      font-family: 'MBK CorpoA Cond', serif;
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      font-weight: 400;
+    }
+
+    .upgrade-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.2rem;
+    }
+
+    .upgrade-item {
+      background: rgba(20, 23, 32, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 1.6rem 1.2rem;
+      position: relative;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .upgrade-item:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold);
+      box-shadow: 0 12px 24px rgba(201, 169, 110, 0.15);
+      background: rgba(26, 30, 44, 0.9);
+    }
+
+    .upgrade-num {
+      font-family: 'MBK CorpoA', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.8rem;
+      opacity: 0.9;
+    }
+
+    .upgrade-category-tag {
+      font-size: 0.68rem;
+      color: var(--silver);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .upgrade-item strong {
+      display: block;
+      color: var(--white);
+      font-size: 0.98rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      line-height: 1.3;
+    }
+
+    .upgrade-item span {
+      font-size: 0.82rem;
+      color: var(--silver);
+      line-height: 1.55;
+      display: block;
+    }
+
+    /* Card Grid */
+    .card-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .tech-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.8rem;
+    }
+
+    .tech-card h4 {
+      color: var(--white);
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+      font-weight: 500;
+    }
+
+    .tech-card p {
+      color: var(--silver);
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    /* =========================================================
+       4. EXTERIOR DESIGN LINE-UP
+       ========================================================= */
+    .design-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .design-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .design-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold);
+    }
+
+    .design-card-head {
+      background: var(--navy);
+      padding: 1rem 1.2rem;
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .design-card-head h3 {
+      color: var(--white);
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    .design-card-body {
+      padding: 1.2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .design-img-box {
+      background: #000;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      height: 180px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .design-img-box span {
+      font-size: 0.8rem;
+      color: var(--silver);
+    }
+
+    .design-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: pointer;
+    }
+
+    .design-desc {
+      font-size: 0.85rem;
+      color: var(--silver);
+      line-height: 1.6;
+    }
+
+    .design-feature-list {
+      list-style: none;
+      font-size: 0.82rem;
+      color: var(--light);
+      border-top: 1px dashed var(--border);
+      padding-top: 0.8rem;
+    }
+
+    .design-feature-list li {
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .design-feature-list li::before {
+      content: '✓';
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    /* =========================================================
+       5. DETAILED PRODUCT LINE-UP
+       ========================================================= */
+    .lineup-group-title {
+      font-family: 'MBK CorpoA Cond', serif;
+      font-size: 1.5rem;
+      color: var(--gold-light);
+      margin: 2rem 0 1rem 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(201,169,110,0.3);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .product-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.6rem;
+      position: relative;
+    }
+
+    .product-card.highlight-bg {
+      border-color: rgba(201,169,110,0.4);
+      background: linear-gradient(180deg, var(--card2) 0%, var(--card) 100%);
+    }
+
+    .product-code {
+      font-family: 'MBK CorpoA', serif;
+      font-size: 0.75rem;
+      color: var(--silver);
+      letter-spacing: 1px;
+      margin-bottom: 0.2rem;
+    }
+
+    .product-name {
+      font-size: 1.25rem;
+      color: var(--white);
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .product-badge {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(201,169,110,0.15);
+      color: var(--gold);
+      border: 1px solid rgba(201,169,110,0.3);
+    }
+
+    .product-badge.amg {
+      background: rgba(225,29,72,0.15);
+      color: var(--limited);
+      border-color: rgba(225,29,72,0.3);
+    }
+
+    .spec-table-mini {
+      width: 100%;
+      font-size: 0.82rem;
+      margin-bottom: 1rem;
+      border-collapse: collapse;
+    }
+
+    .spec-table-mini td {
+      padding: 0.35rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .spec-table-mini td:first-child {
+      color: var(--silver);
+      width: 28%;
+    }
+
+    .spec-table-mini td:last-child {
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    .product-main-img {
+      height: 180px;
+      background: #0d0f14;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .feature-thumbnails {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+    }
+
+    .thumb-item {
+      background: #0d0f14;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.4rem;
+      text-align: center;
+    }
+
+    .thumb-img {
+      height: 55px;
+      background: #000;
+      border-radius: 4px;
+      margin-bottom: 0.3rem;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      color: var(--silver);
+    }
+
+    .thumb-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .thumb-label {
+      font-size: 0.7rem;
+      color: var(--silver);
+      line-height: 1.2;
+      display: block;
+    }
+
+    /* =========================================================
+       6. DIGITAL COCKPIT & DIMENSIONS
+       ========================================================= */
+    .cockpit-sub-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .cockpit-sub-card {
+      background: var(--card);
+      border-radius: 10px;
+      padding: 1.4rem;
+      border: 1px solid var(--border);
+    }
+
+    .cockpit-sub-card .img-wrapper {
+      height: 160px;
+      margin-bottom: 1rem;
+    }
+
+    /* 차체 제원 및 비교 표 */
+    .dimension-box {
+      background: var(--card2);
+      border: 1px solid rgba(201, 169, 110, 0.3);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-top: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .dim-badge {
+      color: var(--green-up);
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-left: 6px;
+    }
+
+    .dim-info h3 {
+      font-size: 1.4rem;
+      color: var(--white);
+      margin-bottom: 0.8rem;
+      font-weight: 400;
+    }
+
+    .dim-info p {
+      font-size: 0.9rem;
+      color: var(--silver);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .dim-bullet {
+      list-style: none;
+      font-size: 0.88rem;
+      color: var(--white);
+    }
+
+    .dim-bullet li {
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dim-bullet li::before {
+      content: '•';
+      color: var(--gold);
+    }
+
+    /* =========================================================
+       7. LAUNCH EDITION
+       ========================================================= */
+    .launch-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .launch-card {
+      background: var(--card);
+      border: 1px solid rgba(225, 29, 72, 0.35);
+      border-radius: 12px;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .launch-badge {
+      display: inline-block;
+      background: rgba(225, 29, 72, 0.15);
+      color: var(--limited);
+      padding: 0.25rem 0.7rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(225, 29, 72, 0.3);
+    }
+
+    .launch-card h4 {
+      font-size: 1.2rem;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+
+    .launch-card p {
+      font-size: 0.88rem;
+      color: var(--silver);
+      line-height: 1.6;
+    }
+
+    .launch-specs {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px dashed var(--border);
+      font-size: 0.82rem;
+      color: var(--gold-light);
+    }
+
+    /* =========================================================
+       8. POWERTRAIN & PERFORMANCE
+       ========================================================= */
+    .engine-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .engine-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.8rem;
+      position: relative;
+    }
+
+    .engine-card.highlight {
+      border-color: var(--gold);
+      background: linear-gradient(180deg, var(--card2) 0%, var(--card) 100%);
+    }
+
+    .engine-tag {
+      font-size: 0.7rem;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .engine-card h3 {
+      font-size: 1.25rem;
+      color: var(--white);
+      margin-bottom: 0.8rem;
+    }
+
+    .engine-stats {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .engine-stats li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.85rem;
+    }
+
+    .engine-stats li span:first-child {
+      color: var(--silver);
+    }
+
+    .engine-stats li span:last-child {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    /* =========================================================
+       9. EXTERIOR & WHEELS VISUALS
+       ========================================================= */
+    .img-placeholder {
+      width: 100%;
+      background: #111319;
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--silver);
+      font-size: 0.8rem;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .img-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform 0.4s ease;
+    }
+
+    .img-placeholder:hover img {
+      transform: scale(1.04);
+    }
+
+    .clickable-img {
+      cursor: pointer;
+    }
+
+    .wheel-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+    }
+
+    .wheel-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .wheel-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      margin-bottom: 0.8rem;
+    }
+
+    .wheel-card h5 {
+      font-size: 0.9rem;
+      color: var(--white);
+      margin-bottom: 0.2rem;
+    }
+
+    .wheel-card span {
+      font-size: 0.78rem;
+      color: var(--gold);
+    }
+
+    /* =========================================================
+       10. COLOR CUSTOMIZER
+       ========================================================= */
+    .color-section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.2rem;
+    }
+
+    .color-controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.8rem;
+      background: var(--navy);
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      margin-bottom: 1.8rem;
+    }
+
+    .color-control-group h3 {
+      font-size: 0.95rem;
+      color: var(--white);
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    .color-palette {
+      display: flex;
+      gap: 0.7rem;
+      flex-wrap: wrap;
+    }
+
+    .color-chip {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid #444;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .color-chip:hover {
+      transform: scale(1.1);
+    }
+
+    .color-chip.active {
+      border-color: var(--gold);
+      box-shadow: 0 0 12px rgba(201,169,110,0.6);
+    }
+
+    .selected-color-title {
+      font-size: 0.88rem;
+      color: var(--gold);
+      margin-top: 0.8rem;
+      font-weight: 600;
+    }
+
+    .color-preview-container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .preview-wrapper {
+      position: relative;
+    }
+
+    .preview-label {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(8, 9, 14, 0.88);
+      color: var(--gold);
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 4px;
+      border: 1px solid rgba(201,169,110,0.3);
+      z-index: 2;
+    }
+
+    .color-preview-box {
+      height: 300px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .color-summary-bar {
+      background: var(--navy);
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      color: var(--white);
+      border: 1px solid var(--border);
+    }
+
+    /* =========================================================
+       11. MAYBACH SPECIAL SECTION
+       ========================================================= */
+    .maybach-card {
+      background: linear-gradient(135deg, #181510 0%, #08090e 100%);
+      border: 1px solid var(--gold-dim);
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .maybach-header {
+      border-bottom: 1px solid rgba(201,169,110,0.2);
+      padding-bottom: 1.2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .maybach-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .maybach-item {
+      background: rgba(201,169,110,0.03);
+      border: 1px solid rgba(201,169,110,0.15);
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+
+    .maybach-item h4 {
+      color: var(--gold-light);
+      font-size: 1.05rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .maybach-item p {
+      font-size: 0.85rem;
+      color: var(--silver);
+      line-height: 1.6;
+    }
+
+    /* =========================================================
+       12. PORTFOLIO & SPEC MATRIX
+       ========================================================= */
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      background: var(--card);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      text-align: left;
+    }
+
+    th, td {
+      padding: 0.95rem 1.2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background: var(--navy);
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+
+    td {
+      color: var(--silver);
+    }
+
+    .category-row td {
+      background: rgba(201,169,110,0.06);
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* =========================================================
+       13. FAQ SECTION
+       ========================================================= */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+
+    .faq-item h4 {
+      color: var(--white);
+      font-size: 1rem;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .faq-item h4::before {
+      content: 'Q.';
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .faq-item p {
+      font-size: 0.88rem;
+      color: var(--silver);
+      line-height: 1.6;
+    }
+
+    /* =========================================================
+       14. QUICK CONSULT FORM & CONTACT CTA
+       ========================================================= */
+    .consult-form-box {
+      background: var(--navy);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-group label {
+      font-size: 0.82rem;
+      color: var(--gold);
+    }
+
+    .form-group input, .form-group select {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--white);
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    .form-group input:focus, .form-group select:focus {
+      border-color: var(--gold);
+    }
+
+    .submit-btn {
+      grid-column: span 2;
+      background: var(--gold);
+      color: #000;
+      font-weight: 700;
+      padding: 0.9rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      transition: background 0.2s;
+    }
+
+    .submit-btn:hover {
+      background: var(--gold-light);
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, #141620 0%, #08090e 100%);
+      border: 1px solid var(--gold);
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .co-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+      margin: 2.2rem 0;
+    }
+
+    .co-btn {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.3rem;
+      text-decoration: none;
+      color: var(--white);
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .co-btn:hover {
+      border-color: var(--gold);
+      transform: translateY(-3px);
+    }
+
+    .co-btn.kakao {
+      background: #fee500;
+      color: #191919;
+      font-weight: 700;
+    }
+
+    .co-btn.call {
+      background: var(--gold);
+      color: #000;
+      font-weight: 700;
+    }
+
+    footer {
+      background: #040507;
+      padding: 2.5rem 0;
+      font-size: 0.8rem;
+      color: #666;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* Modal Overlay */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .upgrade-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 960px) {
+      .po-core-grid, .upgrade-grid, .card-grid-3, .launch-grid, .engine-grid, .wheel-grid, .cockpit-sub-grid, .color-controls, .color-preview-container, .maybach-grid, .faq-grid, .co-grid, .form-grid, .dimension-box, .design-grid, .product-grid {
+        grid-template-columns: 1fr;
+      }
+      .feature-thumbnails {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .submit-btn {
+        grid-column: span 1;
+      }
+      .po-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(201,169,110,0.2);
+        padding-bottom: 1rem;
+      }
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header>
+    <div class="brand">MERCEDES-BENZ</div>
+    <div class="advisor-info">
+      BenzDream <span>김석현 과장</span>
+    </div>
+  </header>
+
+  <!-- 히어로 섹션 -->
+  <section class="hero">
+    <img src="https://homanhan-glitch.github.io/benzdream-approach/MY27_SClass_OG.jpg" alt="The new S-Class" class="hero-img">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">The Facelift Edition (BR 223M)</div>
+      <h1 class="hero-title">The new S-Class MY27</h1>
+      <p class="hero-sub">플래그십 세단의 새로운 기준, 더욱 대담해진 존재감과 디지털 혁신</p>
+
+      <!-- 사전계약 혜택 종합 카운터 -->
+      <div class="preorder-card">
+        <div class="po-core-grid">
+          <div class="po-item">
+            <div class="po-label">PRE-ORDER START</div>
+            <div class="po-val">5월 18일 공식 개시</div>
+            <div class="po-sub">계약금 500만원 (전액 환불 가능)</div>
+          </div>
+          <div class="po-item">
+            <div class="po-label">RETENTION BENEFIT</div>
+            <div class="po-val">재구매 최대 +2%</div>
+            <div class="po-sub">Cash Retention + Trade-in 추가 지원</div>
+          </div>
+          <div class="po-item">
+            <div class="po-label">WARRANTY EXTENSION</div>
+            <div class="po-val">보증연장 +2년</div>
+            <div class="po-sub">최대 +7만km 추가 보증 확장 혜택</div>
+          </div>
+          <div class="po-item">
+            <div class="po-label">VIP ALL-CARE</div>
+            <div class="po-val">전시차 우선 배정</div>
+            <div class="po-sub">초기 출고 혜택 및 고급 사은품 증정</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- KEY UPGRADES (최상단 요약 배너 - 5가지 프레임) -->
+    <div class="upgrade-banner">
+      <div class="upgrade-header">
+        <span class="upgrade-header-tag">KEY UPGRADES</span>
+        <h2 class="upgrade-header-title">The new S-Class를 완성하는 5가지 핵심 혁신</h2>
+      </div>
+
+      <div class="upgrade-grid">
+        <div class="upgrade-item">
+          <div>
+            <div class="upgrade-num">01</div>
+            <span class="upgrade-category-tag">Exterior & Presence</span>
+            <strong>일루미네이티드 그릴 & 웅장한 차체</strong>
+          </div>
+          <span>조명형 삼각별 라디에이터 그릴과 전장(+15mm), 전폭(+14mm) 확대로 한층 대담하고 압도적인 스탠스를 완성합니다.</span>
+        </div>
+
+        <div class="upgrade-item">
+          <div>
+            <div class="upgrade-num">02</div>
+            <span class="upgrade-category-tag">Digital Cockpit</span>
+            <strong>MBUX 슈퍼스크린 & MB.OS</strong>
+          </div>
+          <span>조수석 12.3인치 디스플레이가 통합된 대화면 슈퍼스크린과 5G 기반 차세대 MB.OS가 독보적인 디지털 경험을 제공합니다.</span>
+        </div>
+
+        <div class="upgrade-item">
+          <div>
+            <div class="upgrade-num">03</div>
+            <span class="upgrade-category-tag">Chassis & Dynamics</span>
+            <strong>리어 액슬 & 에어 서스펜션</strong>
+          </div>
+          <span>최대 10° 후륜 조향 시스템과 AIRMATIC 서스펜션이 기본 적용되어 민첩한 회전 성능과 최상의 승차감을 자랑합니다.</span>
+        </div>
+
+        <div class="upgrade-item">
+          <div>
+            <div class="upgrade-num">04</div>
+            <span class="upgrade-category-tag">First-Class Comfort</span>
+            <strong>쇼퍼 패키지 & 감성 웰빙</strong>
+          </div>
+          <span>액티브 앰비언트 라이트, 종아리 마사지, 온열 넥 쿠션 등 퍼스트 클래스 전용 뒷좌석 컴포트 라운지를 제공합니다.</span>
+        </div>
+
+        <div class="upgrade-item">
+          <div>
+            <div class="upgrade-num">05</div>
+            <span class="upgrade-category-tag">Intelligent Safety</span>
+            <strong>MB.DRIVE & 디지털 라이트</strong>
+          </div>
+          <span>최첨단 MB.DRIVE 어시스트 주행 보조 시스템과 정교한 차세대 DIGITAL LIGHT 기술로 안전의 정점을 제시합니다.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1. EXTERIOR DESIGN LINE-UP -->
+    <section>
+      <span class="sec-label">DESIGN LINE-UP</span>
+      <h2 class="sec-title">외관 디자인 익스테리어 라인업</h2>
+      <p class="sec-desc">고객의 취향과 라이프스타일에 맞춘 Standard, AMG Line, 그리고 Maybach 전용 익스테리어 테마를 제공합니다.</p>
+
+      <div class="design-grid">
+        <!-- Standard -->
+        <div class="design-card">
+          <div class="design-card-head">
+            <h3>Standard</h3>
+          </div>
+          <div class="design-card-body">
+            <div class="design-img-box">
+              <span>[Standard 익스테리어]</span>
+              <img src="images/ext-lineup-standard.jpg" alt="Standard 외관" class="clickable-img" onerror="this.style.display='none'">
+            </div>
+            <p class="design-desc">클래식한 수평 핀 그리드와 삼각별 본넷 오너먼트가 정돈된 플래그십 세단의 클래식한 정수를 보여줍니다.</p>
+            <ul class="design-feature-list">
+              <li>클래식 라디에이터 그릴 & 본넷 오너먼트</li>
+              <li>정숙하고 우아한 멀티 스포크 휠 매칭</li>
+              <li>절제된 크롬 트림 익스테리어 파츠</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- AMG Line -->
+        <div class="design-card">
+          <div class="design-card-head">
+            <h3>AMG Line</h3>
+          </div>
+          <div class="design-card-body">
+            <div class="design-img-box">
+              <span>[AMG Line 익스테리어]</span>
+              <img src="images/ext-lineup-amg.jpg" alt="AMG Line 외관" class="clickable-img" onerror="this.style.display='none'">
+            </div>
+            <p class="design-desc">스포티한 범퍼 에어 인테이크와 날렵한 스포크 휠이 세단 특유의 감성에 대담하고 역동적인 에너지를 더합니다.</p>
+            <ul class="design-feature-list">
+              <li>AMG 전용 스포티 프론트/리어 에어댐 범퍼</li>
+              <li>5-스포크 / AMG 멀티스포크 경량 알로이 휠</li>
+              <li>다크 크롬 파츠 및 옵션 나이트 패키지</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Maybach -->
+        <div class="design-card">
+          <div class="design-card-head">
+            <h3>Maybach</h3>
+          </div>
+          <div class="design-card-body">
+            <div class="design-img-box">
+              <span>[Maybach 익스테리어]</span>
+              <img src="images/ext-lineup-maybach.jpg" alt="Maybach 외관" class="clickable-img" onerror="this.style.display='none'">
+            </div>
+            <p class="design-desc">시그니처 버티컬 세로 스트라이프 그릴과 수제작 투톤 페인트, 단조 휠이 차원이 다른 독보적 프레스티지를 완성합니다.</p>
+            <ul class="design-feature-list">
+              <li>수직 핀 세로 라디에이터 그릴 & MAYBACH 레터링</li>
+              <li>MANUFAKTUR 투톤 익스테리어 페인트</li>
+              <li>마이바흐 전용 21인치 포지드 불판형 휠</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. PRODUCT LINE-UP -->
+    <section>
+      <span class="sec-label">PRODUCT LINE-UP</span>
+      <h2 class="sec-title">MY27 세부 트림별 사양 및 패키지 구성을 한눈에</h2>
+      <p class="sec-desc">휠베이스 및 파워트레인에 따른 표준 익스테리어, 인테리어 가죽, 휠 스펙 및 핵심 기본 적용 사양입니다.</p>
+
+      <!-- 스탠다드 휠베이스 -->
+      <div class="lineup-group-title">
+        <span>🚗 Product Line-up _ 스탠다드 휠베이스</span>
+      </div>
+      <div class="product-grid">
+        <!-- S 350 d 4MATIC -->
+        <div class="product-card">
+          <div class="product-code">22302412-KR1</div>
+          <div class="product-name">
+            <span>S 350 d 4MATIC</span>
+            <span class="product-badge">STD Wheelbase</span>
+          </div>
+          <table class="spec-table-mini">
+            <tr><td>Exterior</td><td>Standard</td></tr>
+            <tr><td>Interior</td><td>가죽 시트</td></tr>
+            <tr><td>Wheel</td><td>19인치 멀티 트윈 스포크 경량 알로이 휠</td></tr>
+            <tr><td>MSRP</td><td>TBD (출고 시점 공지)</td></tr>
+          </table>
+          <div class="product-main-img">
+            <span>[S 350 d 4MATIC 차관]</span>
+            <img src="images/s350d-car.jpg" alt="S 350 d" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <div class="feature-thumbnails">
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[그릴]</span><img src="images/feat-facelift-grille.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">페이스리프트 기본 사양 강화</span>
+            </div>
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[에어매틱]</span><img src="images/feat-airmatic.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">에어매틱 서스펜션</span>
+            </div>
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[앞좌석]</span><img src="images/feat-front-seat.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">앞좌석 열선 및 통풍</span>
+            </div>
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[뒷좌석]</span><img src="images/feat-rear-heat.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">뒷좌석 열선 시트</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- S 450 4MATIC (STD) -->
+        <div class="product-card">
+          <div class="product-code">22306512-KR1</div>
+          <div class="product-name">
+            <span>S 450 4MATIC</span>
+            <span class="product-badge amg">AMG Line</span>
+          </div>
+          <table class="spec-table-mini">
+            <tr><td>Exterior</td><td>AMG Line</td></tr>
+            <tr><td>Interior</td><td>가죽 시트</td></tr>
+            <tr><td>Wheel</td><td>19인치 AMG 5 트윈 스포크 경량 알로이 휠</td></tr>
+            <tr><td>MSRP</td><td>TBD (출고 시점 공지)</td></tr>
+          </table>
+          <div class="product-main-img">
+            <span>[S 450 4MATIC STD 차관]</span>
+            <img src="images/s450-std-car.jpg" alt="S 450 STD" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <div class="feature-thumbnails">
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[그릴]</span><img src="images/feat-facelift-grille.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">페이스리프트 기본 사양 강화</span>
+            </div>
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[에어매틱]</span><img src="images/feat-airmatic.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">에어매틱 서스펜션</span>
+            </div>
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[앞좌석]</span><img src="images/feat-front-seat.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">앞좌석 열선 및 통풍</span>
+            </div>
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[뒷좌석]</span><img src="images/feat-rear-heat.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">뒷좌석 열선 시트</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 롱 휠베이스 Part 1 -->
+      <div class="lineup-group-title">
+        <span>🚘 Product Line-up _ 롱 휠베이스 (S 450 4MATIC Long)</span>
+      </div>
+      <div class="product-grid">
+        <!-- S 450 4MATIC Long Exclusive -->
+        <div class="product-card">
+          <div class="product-code">22316512-KR1</div>
+          <div class="product-name">
+            <span>S 450 4M Long Exclusive</span>
+            <span class="product-badge">Long Wheelbase</span>
+          </div>
+          <table class="spec-table-mini">
+            <tr><td>Exterior</td><td>Standard</td></tr>
+            <tr><td>Interior</td><td>가죽 시트</td></tr>
+            <tr><td>Wheel</td><td>20인치 멀티 스포크 경량 알로이 휠</td></tr>
+            <tr><td>비고</td><td>일부 초도 물량 432 코드 유료옵션 포함</td></tr>
+          </table>
+          <div class="product-main-img">
+            <span>[S 450 L Exc 차관]</span>
+            <img src="images/s450l-exc-car.jpg" alt="S 450 L Exc" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <div class="feature-thumbnails">
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[그릴]</span><img src="images/feat-facelift-grille.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">페이스리프트 기본 사양 강화</span>
+            </div>
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[에어매틱]</span><img src="images/feat-airmatic.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">에어매틱 서스펜션</span>
+            </div>
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[뒷좌석전동]</span><img src="images/feat-rear-memory.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">메모리 포함 뒷좌석 전동 시트</span>
+            </div>
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[뒷좌석통풍]</span><img src="images/feat-rear-vent.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">뒷좌석 열선 및 통풍 시트</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- S 450 4MATIC Long AMG Line -->
+        <div class="product-card highlight-bg">
+          <div class="product-code">22316512-KR2</div>
+          <div class="product-name">
+            <span>S 450 4M Long AMG Line</span>
+            <span class="product-badge amg">AMG Line</span>
+          </div>
+          <table class="spec-table-mini">
+            <tr><td>Exterior</td><td>AMG Line</td></tr>
+            <tr><td>Interior</td><td>나파 가죽 시트</td></tr>
+            <tr><td>Wheel</td><td>20인치 AMG 크로스 스포크 경량 알로이 휠</td></tr>
+            <tr><td>MSRP</td><td>TBD (출고 시점 공지)</td></tr>
+          </table>
+          <div class="product-main-img">
+            <span>[S 450 L AMG 차관]</span>
+            <img src="images/s450l-amg-car.jpg" alt="S 450 L AMG" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <div class="feature-thumbnails">
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[그릴]</span><img src="images/feat-facelift-grille.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">페이스리프트 기본 사양 강화</span>
+            </div>
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[에어매틱]</span><img src="images/feat-airmatic.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">에어매틱 서스펜션</span>
+            </div>
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[MBUX엔터]</span><img src="images/feat-mbux-rear.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">MBUX 하이엔드 뒷좌석 엔터테인먼트</span>
+            </div>
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[멀티컨투어]</span><img src="images/feat-multicontour.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">앞좌석 액티브 멀티컨투어 시트</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 롱 휠베이스 Part 2 -->
+      <div class="lineup-group-title">
+        <span>👑 Product Line-up _ 플래그십 롱 휠베이스 (S 500 & S 580 4MATIC Long)</span>
+      </div>
+      <div class="product-grid">
+        <!-- S 500 4MATIC Long -->
+        <div class="product-card">
+          <div class="product-code">22316412-KR1</div>
+          <div class="product-name">
+            <span>S 500 4MATIC Long</span>
+            <span class="product-badge">Long Wheelbase</span>
+          </div>
+          <table class="spec-table-mini">
+            <tr><td>Exterior</td><td>Standard</td></tr>
+            <tr><td>Interior</td><td>나파 가죽 시트</td></tr>
+            <tr><td>Wheel</td><td>20인치 멀티 스포크 경량 알로이 휠</td></tr>
+            <tr><td>MSRP</td><td>TBD (출고 시점 공지)</td></tr>
+          </table>
+          <div class="product-main-img">
+            <span>[S 500 L 차관]</span>
+            <img src="images/s500l-car.jpg" alt="S 500 L" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <div class="feature-thumbnails">
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[그릴]</span><img src="images/feat-facelift-grille.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">페이스리프트 기본 사양 강화</span>
+            </div>
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[에어매틱]</span><img src="images/feat-airmatic.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">에어매틱 서스펜션</span>
+            </div>
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[쇼퍼패키지]</span><img src="images/feat-chauffeur.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">쇼퍼 패키지 & 뒷좌석 마사지</span>
+            </div>
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[IR글라스]</span><img src="images/feat-ir-glass.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">IR 라미네이티드 글라스</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- S 580 4MATIC Long -->
+        <div class="product-card highlight-bg">
+          <div class="product-code">22317712-KR1</div>
+          <div class="product-name">
+            <span>S 580 4MATIC Long</span>
+            <span class="product-badge">V8 Flagship</span>
+          </div>
+          <table class="spec-table-mini">
+            <tr><td>Exterior</td><td>Standard</td></tr>
+            <tr><td>Interior</td><td>익스클루시브 나파 가죽 시트</td></tr>
+            <tr><td>Wheel</td><td>20인치 10 트윈 스포크 단조 휠</td></tr>
+            <tr><td>비고</td><td>일부 물량 60R (20" 멀티스포크) 적용 예정</td></tr>
+          </table>
+          <div class="product-main-img">
+            <span>[S 580 L 차관]</span>
+            <img src="images/s580l-car.jpg" alt="S 580 L" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <div class="feature-thumbnails">
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[그릴]</span><img src="images/feat-facelift-grille.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">페이스리프트 기본 사양 강화</span>
+            </div>
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[E-ACTIVE]</span><img src="images/feat-e-active.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">E-액티브 바디 컨트롤</span>
+            </div>
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[AR-HUD]</span><img src="images/feat-ar-hud.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">MBUX 증강현실 헤드업 디스플레이</span>
+            </div>
+            <div class="thumb-item">
+              <div class="thumb-img"><span>[익스클루시브]</span><img src="images/feat-exclusive-pkg.jpg" class="clickable-img" onerror="this.style.display='none'"></div>
+              <span class="thumb-label">최상급 익스클루시브 패키지</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. INNOVATION -->
+    <section>
+      <span class="sec-label">INNOVATION</span>
+      <h2 class="sec-title">혁신적인 파워트레인 및 서스펜션 기술</h2>
+      <p class="sec-desc">S-Class 특유의 정숙성과 압도적인 승차감을 완성하는 벤츠 최고 레벨의 주행 하이라이트 사양입니다.</p>
+
+      <div class="card-grid-3">
+        <div class="tech-card">
+          <h4>리어 액슬 스티어링 (Rear-Axle Steering)</h4>
+          <p>후륜 조향 시스템이 최대 4.5°~10° 지원되어 대형 세단임에도 불구하고 C-Class 수준의 컴팩트한 회전 반경과 정교한 고속 코너링 안정성을 제공합니다.</p>
+        </div>
+        <div class="tech-card">
+          <h4>E-ACTIVE BODY CONTROL</h4>
+          <p>1초에 1,000회 이상 노면 상태를 감지하여 각 바퀴의 스프링과 댐핑력을 독립적으로 제어, 노면 충격을 완벽하게 흡수하고 롤링 현상을 차단합니다.</p>
+        </div>
+        <div class="tech-card">
+          <h4>48V 마일드 하이브리드 (ISG)</h4>
+          <p>2세대 통합 스타터 제너레이터(ISG)가 추가 출력을 지원(최대 17kW/200Nm)하여 가속 응답성을 높이고, 시동 시 진동 및 소음을 획기적으로 줄여줍니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. DIGITAL COCKPIT & DIMENSIONS -->
+    <section>
+      <span class="sec-label">DIGITAL COCKPIT & DIMENSIONS</span>
+      <h2 class="sec-title">디지털 콕핏 혁신 및 전면부 차체 제원 변화</h2>
+      <p class="sec-desc">실내 디지털 디스플레이의 대대적인 업그레이드와 함께 더욱 대담하고 웅장해진 전면부 디자인 비례를 자랑합니다.</p>
+
+      <div class="cockpit-sub-grid">
+        <div class="cockpit-sub-card">
+          <div class="img-placeholder img-wrapper">
+            <span>[슈퍼스크린]</span>
+            <img src="images/sclass-superscreen.jpg" alt="슈퍼스크린" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h4 style="color:var(--white);">MBUX 슈퍼스크린</h4>
+          <p style="font-size:0.82rem; color:var(--silver);">조수석 12.3인치 독립 엔터테인먼트 디스플레이까지 연결된 일체형 대화면 디스플레이입니다.</p>
+        </div>
+        <div class="cockpit-sub-card">
+          <div class="img-placeholder img-wrapper">
+            <span>[앰비언트 라이트]</span>
+            <img src="images/sclass-ambient.jpg" alt="앰비언트 라이트" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h4 style="color:var(--white);">액티브 앰비언트 라이트</h4>
+          <p style="font-size:0.82rem; color:var(--silver);">차선 이탈 및 하차 경고 등 주행 안전 보조 기능과 감성적인 64색 컬러가 실시간 연동됩니다.</p>
+        </div>
+        <div class="cockpit-sub-card">
+          <div class="img-placeholder img-wrapper">
+            <span>[MB.OS]</span>
+            <img src="images/sclass-mbos.jpg" alt="MB.OS" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h4 style="color:var(--white);">차세대 MB.OS 인포테인먼트</h4>
+          <p style="font-size:0.82rem; color:var(--silver);">초고속 5G 네트워크 기반 OTA 업데이트, 3D 내비게이션, 생성형 AI 음성 비서를 지원합니다.</p>
+        </div>
+      </div>
+
+      <!-- 차체 스펙 비교 박스 -->
+      <div class="dimension-box">
+        <div class="dim-info">
+          <h3>전면부 디자인 & 더 커진 차체 스케일</h3>
+          <p>페이스리프트를 통해 더욱 확대된 <strong>일루미네이티드 라디에이터 그릴</strong>과 삼각별 브랜드 라이트 그래픽이 새롭게 적용되었습니다. 우아한 3-Box 구조를 바탕으로 클래식하면서도 압도적인 스탠스를 전달합니다.</p>
+          <ul class="dim-bullet">
+            <li><strong>전장(길이):</strong> 이전 대비 <span class="dim-badge">+15 mm 확장</span>으로 한층 더 우아한 측면 실루엣</li>
+            <li><strong>전폭(너비):</strong> 이전 대비 <span class="dim-badge">+14 mm 확장</span>되어 도로 위 존재감 극대화</li>
+            <li><strong>라이트 시퀀스:</strong> 전 세계 모든 사양 기본 적용 (웰컴 조명 시퀀스 포함)</li>
+          </ul>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>모델 시리즈</th>
+                <th>W223 FL (숏바디)</th>
+                <th>V223 FL (롱버전)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>길이 (전장)</strong></td>
+                <td>5,194 mm <span class="dim-badge">+15 mm</span></td>
+                <td>5,304 mm <span class="dim-badge">+15 mm</span></td>
+              </tr>
+              <tr>
+                <td><strong>너비 (전폭)</strong></td>
+                <td>2,123 mm <span class="dim-badge">+14 mm</span></td>
+                <td>2,123 mm <span class="dim-badge">+14 mm</span></td>
+              </tr>
+              <tr>
+                <td><strong>높이 (전고)</strong></td>
+                <td>1,503 mm</td>
+                <td>1,503 mm</td>
+              </tr>
+              <tr>
+                <td><strong>축거 (휠베이스)</strong></td>
+                <td>3,106 mm</td>
+                <td>3,216 mm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. LAUNCH EDITION -->
+    <section>
+      <span class="sec-label">LIMITED EDITION</span>
+      <h2 class="sec-title">최초 출시 기념 Launch Edition 라인업</h2>
+      <p class="sec-desc">페이스리프트 초기 도입을 기념하여 한정 수량으로 생산되는 특별 익스클루시브 에디션입니다.</p>
+
+      <div class="launch-grid">
+        <div class="launch-card">
+          <span class="launch-badge">140대 한정 생산</span>
+          <h4>S 450 4MATIC L AMG Line (AMG 라인 플러스)</h4>
+          <p>AMG 라인 플러스 패키지, 다크 크롬 익스테리어 그릴, 나이트 패키지 및 20인치 AMG 전용 휠을 탑재하여 스포티한 감성을 극대화했습니다.</p>
+          <div class="launch-specs">
+            • 전용 옵션: 나이트 패키지, 다크 라디에이터 그릴, 20인치 AMG 멀티스포크 휠, 블랙 익스테리어 트림
+          </div>
+        </div>
+        <div class="launch-card">
+          <span class="launch-badge">140대 한정 생산</span>
+          <h4>S 500 4MATIC L (MANUFAKTUR 스파클링 블랙)</h4>
+          <p>MANUFAKTUR 전용 스파클링 블랙 외장 컬러와 최상급 익스클루시브 패키지(P34)가 결합된 완벽한 럭셔리 에디션입니다.</p>
+          <div class="launch-specs">
+            • 전용 옵션: MANUFAKTUR 페인트, 최상급 익스클루시브 나파 가죽 패키지, 최고급 알칸타라 헤드라이너
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. POWERTRAIN LINEUP -->
+    <section>
+      <span class="sec-label">POWER & PERFORMANCE</span>
+      <h2 class="sec-title">트림별 파워트레인 제원 비교</h2>
+      <p class="sec-desc">디젤, 가솔린, 그리고 최고급 V12 엔진까지 완벽하게 정제된 성능을 갖췄습니다.</p>
+
+      <div class="engine-grid">
+        <div class="engine-card">
+          <span class="engine-tag">DIESEL LINEUP</span>
+          <h3>S 350 d / S 450 d 4M</h3>
+          <p style="font-size: 0.85rem; color: var(--silver);">강력한 토크와 검증된 연비 효율을 선사하는 직렬 6기통 디젤엔진</p>
+          <ul class="engine-stats">
+            <li><span>엔진 형식</span> <span>OM656M I6 Turbo Diesel</span></li>
+            <li><span>최고 출력</span> <span>313 hp ~ 367 hp</span></li>
+            <li><span>최대 토크</span> <span>66.3 kg·m ~ 76.5 kg·m</span></li>
+            <li><span>변속기</span> <span>9G-TRONIC</span></li>
+            <li><span>구동 방식</span> <span>후륜 / 4MATIC</span></li>
+            <li><span>하이브리드</span> <span>48V EQ Boost (ISG)</span></li>
+          </ul>
+        </div>
+
+        <div class="engine-card highlight">
+          <span class="engine-tag">MAIN GASOLINE</span>
+          <h3>S 450 / S 500 4M L</h3>
+          <p style="font-size: 0.85rem; color: var(--silver);">매끄러운 가속감과 압도적 정숙성을 자랑하는 6기통 가솔린 터보</p>
+          <ul class="engine-stats">
+            <li><span>엔진 형식</span> <span>M256M I6 Turbo Gasoline</span></li>
+            <li><span>최고 출력</span> <span>381 hp ~ 449 hp</span></li>
+            <li><span>최대 토크</span> <span>51.0 kg·m ~ 57.1 kg·m</span></li>
+            <li><span>변속기</span> <span>9G-TRONIC</span></li>
+            <li><span>구동 방식</span> <span>4MATIC 올휠 드라이브</span></li>
+            <li><span>서스펜션</span> <span>AIRMATIC / E-ACTIVE</span></li>
+          </ul>
+        </div>
+
+        <div class="engine-card">
+          <span class="engine-tag">V8 / V12 ULTRA LUXURY</span>
+          <h3>S 580 / Maybach S 680</h3>
+          <p style="font-size: 0.85rem; color: var(--silver);">플래그십 정점에 선 V8 바이터보 및 유일무이한 V12 가솔린 엔진</p>
+          <ul class="engine-stats">
+            <li><span>엔진 형식</span> <span>V8 Biturbo / V12 Biturbo</span></li>
+            <li><span>최고 출력</span> <span>503 hp / 612 hp</span></li>
+            <li><span>최대 토크</span> <span>71.4 kg·m / 91.8 kg·m</span></li>
+            <li><span>변속기</span> <span>9G-TRONIC</span></li>
+            <li><span>구동 방식</span> <span>4MATIC</span></li>
+            <li><span>특이사항</span> <span>Maybach 전용 컴포트 모드</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. WHEELS -->
+    <section>
+      <span class="sec-label">WHEEL LINEUP</span>
+      <h2 class="sec-title">주요 휠 디자인 라인업</h2>
+      <div class="wheel-grid" style="margin-top: 1.5rem;">
+        <div class="wheel-card">
+          <div class="img-placeholder wheel-img">
+            <span>[Standard 19"]</span>
+            <img src="images/wheel-19-std.jpg" alt="19인치 휠" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h5>Standard Wheel</h5>
+          <span>19인치 멀티 트윈 스포크</span>
+        </div>
+        <div class="wheel-card">
+          <div class="img-placeholder wheel-img">
+            <span>[Exclusive 20"]</span>
+            <img src="images/wheel-20-exc.jpg" alt="20인치 휠" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h5>Exclusive Design</h5>
+          <span>20인치 멀티 스포크</span>
+        </div>
+        <div class="wheel-card">
+          <div class="img-placeholder wheel-img">
+            <span>[AMG 20"]</span>
+            <img src="images/wheel-20-amg.jpg" alt="20인치 AMG 휠" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h5>AMG Line Wheel</h5>
+          <span>20인치 AMG 크로스 스포크</span>
+        </div>
+        <div class="wheel-card">
+          <div class="img-placeholder wheel-img">
+            <span>[Maybach 21"]</span>
+            <img src="images/wheel-21-maybach.jpg" alt="21인치 마이바흐 휠" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h5>Maybach Edition</h5>
+          <span>21인치 포지드 불판형 휠</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. COLOR CUSTOMIZER -->
+    <section>
+      <div class="color-section">
+        <span class="sec-label">COLOR CUSTOMIZATION</span>
+        <h2 class="sec-title" style="margin-bottom:1.5rem;">익스테리어 & 인테리어 컬러 선택 조합</h2>
+
+        <div class="color-controls">
+          <div class="color-control-group">
+            <h3>• 외장 익스테리어 페인트 (Exterior Colors)</h3>
+            <div class="color-palette" id="ext-palette">
+              <div class="color-chip active" style="background:#111111;" data-color-name="옵시디안 블랙" data-img-src="images/ext-obsidian.jpg"></div>
+              <div class="color-chip" style="background:#f5f5f7;" data-color-name="하이테크 화이트" data-img-src="images/ext-white.jpg"></div>
+              <div class="color-chip" style="background:#9a9eab;" data-color-name="셀레나이트 그레이" data-img-src="images/ext-grey.jpg"></div>
+              <div class="color-chip" style="background:#2b5c8f;" data-color-name="노티컬 블루" data-img-src="images/ext-blue.jpg"></div>
+            </div>
+            <div class="selected-color-title" id="ext-selected-text">외장: 옵시디안 블랙</div>
+          </div>
+
+          <div class="color-control-group">
+            <h3>• 인테리어 가죽 (Interior Upholstery)</h3>
+            <div class="color-palette" id="int-palette">
+              <div class="color-chip active" style="background:#1a1a1a;" data-color-name="블랙 나파 가죽" data-img-src="images/int-black.jpg"></div>
+              <div class="color-chip" style="background:#7b4a2b;" data-color-name="마키아토 베이지 / 시에나 브라운" data-img-src="images/int-brown.jpg"></div>
+              <div class="color-chip" style="background:#e3d7c5;" data-color-name="네바 그레이" data-img-src="images/int-grey.jpg"></div>
+            </div>
+            <div class="selected-color-title" id="int-selected-text">내장: 블랙 나파 가죽</div>
+          </div>
+        </div>
+
+        <div class="color-preview-container">
+          <div class="preview-wrapper">
+            <span class="preview-label">익스테리어 뷰</span>
+            <div class="img-placeholder color-preview-box">
+              <span>[외장 프리뷰]</span>
+              <img id="ext-preview-img" src="images/ext-obsidian.jpg" alt="외장 차량" class="clickable-img" onerror="this.style.display='none'">
+            </div>
+          </div>
+          <div class="preview-wrapper">
+            <span class="preview-label">인테리어 뷰</span>
+            <div class="img-placeholder color-preview-box">
+              <span>[내장 프리뷰]</span>
+              <img id="int-preview-img" src="images/int-black.jpg" alt="내장 시트" class="clickable-img" onerror="this.style.display='none'">
+            </div>
+          </div>
+        </div>
+
+        <div class="color-summary-bar">
+          🎨 <strong>선택하신 조합:</strong> <span id="total-color-text">옵시디안 블랙 / 블랙 나파 가죽</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. MAYBACH SPECIAL SECTION -->
+    <section>
+      <span class="sec-label">MAYBACH EXCLUSIVE</span>
+      <h2 class="sec-title">Mercedes-Maybach S-Class MY27</h2>
+      <p class="sec-desc">최상위 프리미엄 가치를 지닌 마이바흐 라인업만의 독보적 요소입니다.</p>
+
+      <div class="maybach-card">
+        <div class="maybach-header">
+          <h3 style="color: var(--white); font-size: 1.5rem; font-weight: 400;">최상위 클래스만을 위한 서라운드 컴포트</h3>
+        </div>
+        <div class="maybach-grid">
+          <div class="maybach-item">
+            <h4>자동 전동식 컴포트 도어</h4>
+            <p>MBUX 시스템 또는 스마트키, 사시지 경고 시스템과 연동되어 안전하고 문을 유연하게 열고 닫을 수 있는 전동 도어가 기본 탑재됩니다.</p>
+          </div>
+          <div class="maybach-item">
+            <h4>MANUFAKTUR 투톤 페인트</h4>
+            <p>장인의 수작업 도장 공정을 거쳐 완성되는 마이바흐 익스클루시브 투톤 페인트 옵션으로 독보적인 클래스를 선사합니다.</p>
+          </div>
+          <div class="maybach-item">
+            <h4>쇼퍼 패키지 & 리어 리클라이닝</h4>
+            <p>최대 43.5도까지 기울어지는 리클라이닝 시트와 종아리 마사지, 온열 넥 쿠션이 포함된 퍼스트 클래스 전용 라운지 환경을 구축합니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. PORTFOLIO MATRIX -->
+    <section>
+      <span class="sec-label">PORTFOLIO MATRIX</span>
+      <h2 class="sec-title">트림별 파워트레인 및 사양 매트릭스</h2>
+      <div class="table-wrapper" style="margin-top: 1.5rem;">
+        <table>
+          <thead>
+            <tr>
+              <th>트림명</th>
+              <th>예상 가격대</th>
+              <th>엔진 / 파워트레인</th>
+              <th>구동 방식</th>
+              <th>주요 표준 사양</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="category-row">
+              <td colspan="5">🔹 Standard & Long Wheelbase 라인업</td>
+            </tr>
+            <tr>
+              <td><strong>S 350 d / S 450 d 4M</strong></td>
+              <td>1억 5,000만원대~</td>
+              <td>직렬 6기통 디젤 (MHEV)</td>
+              <td>FR / 4MATIC</td>
+              <td>에어매틱, 어쿠스틱 글라스, MBUX 슈퍼스크린, 후륜 조향</td>
+            </tr>
+            <tr>
+              <td><strong>S 450 4M L (AMG Line)</strong></td>
+              <td>1억 8,000만원대~</td>
+              <td>직렬 6기통 가솔린 터보 (MHEV)</td>
+              <td>4MATIC</td>
+              <td>AMG 바디킷, 리어 액슬 스티어링, 디지털 라이트, 파노라마 선루프</td>
+            </tr>
+            <tr>
+              <td><strong>S 500 4M L</strong></td>
+              <td>2억 0,500만원대~</td>
+              <td>직렬 6기통 가솔린 터보 (MHEV)</td>
+              <td>4MATIC</td>
+              <td>E-액티브 바디컨트롤, 쇼퍼 패키지, 뒷좌석 마사지, 증강현실 HUD</td>
+            </tr>
+            <tr>
+              <td><strong>S 580 4M L</strong></td>
+              <td>2억 4,500만원대~</td>
+              <td>V8 가솔린 바이터보 (MHEV)</td>
+              <td>4MATIC</td>
+              <td>최상급 익스클루시브 나파 가죽, 부메스터 4D 사운드, 뒷좌석 엔터테인먼트</td>
+            </tr>
+            <tr class="category-row">
+              <td colspan="5">🔸 최상위 Maybach 라인업</td>
+            </tr>
+            <tr>
+              <td><strong>Maybach S 580 4M</strong></td>
+              <td>3억 0,000만원대~</td>
+              <td>V8 가솔린 바이터보 (MHEV)</td>
+              <td>4MATIC</td>
+              <td>마이바흐 전용 컴포트 도어, 휠베이스 연장, 최고급 인디비주얼 시트</td>
+            </tr>
+            <tr>
+              <td><strong>Maybach S 680 4M</strong></td>
+              <td>3억 8,000만원대~</td>
+              <td>V12 가솔린 바이터보</td>
+              <td>4MATIC</td>
+              <td>MANUFAKTUR 전용 실내, V12 엔진 패키지, 수제작 투톤 컬러 트림</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 11. FAQ -->
+    <section>
+      <span class="sec-label">FREQUENTLY ASKED QUESTIONS</span>
+      <h2 class="sec-title">사전계약 및 출고 관련 자주 묻는 질문</h2>
+
+      <div class="faq-grid" style="margin-top: 1.5rem;">
+        <div class="faq-item">
+          <h4>사전계약금 및 계약 환불 기준은 어떻게 되나요?</h4>
+          <p>사전계약금은 500만원이며, 차량 배정 전 언제든지 조건 없이 100% 전액 환불이 가능합니다. 우선 순위 물량 배정을 위해 신속한 접수를 권장합니다.</p>
+        </div>
+        <div class="faq-item">
+          <h4>기존 벤츠 보유 고객 재구매 혜택 조건은?</h4>
+          <p>메르세데스-벤츠 차량을 보유 중이시거나 트레이드인(Trade-in)을 이용하실 경우, 최대 2%까지 매매가 할인 및 보증 연장 프로모션이 중복 적용됩니다.</p>
+        </div>
+        <div class="faq-item">
+          <h4>MY27 페이스리프트 정식 출고 시점은 언제인가요?</h4>
+          <p>5월 18일 사전계약 시작 후, 국토부/환경부 인증 절차를 거쳐 올해 하반기부터 순차적으로 고객 인도가 진행될 예정입니다.</p>
+        </div>
+        <div class="faq-item">
+          <h4>법인 리스 및 장기렌트 견적 상담도 가능한가요?</h4>
+          <p>네, 법인 맞춤형 최저 금리 파이낸셜 프로그램 및 비용처리 전용 리스/렌트 상담을 원스톱으로 지원해 드립니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. QUICK CONSULT FORM & CONTACT CTA -->
+    <section>
+      <div class="contact-card">
+        <span class="sec-label">PRE-ORDER & CONSULTING</span>
+        <h2 style="font-size: 1.8rem; color: var(--white); margin-bottom:0.5rem;">VIP 맞춤형 견적 및 사전계약 상담</h2>
+        <p style="color: var(--silver); font-size: 0.95rem; margin-bottom: 2rem;">
+          전시장 내원 예약 시 전용 사은품 증정 및 리스/렌트/할부 금융 파이낸셜 컨설팅을 제공합니다.
+        </p>
+
+        <!-- 간편 견적 신청 폼 -->
+        <div class="consult-form-box">
+          <h3 style="color:var(--gold-light); font-size:1.1rem; font-weight:500;">⚡ 빠른 사전계약 / 견적 문의 접수</h3>
+          <form onsubmit="alert('상담 신청이 완료되었습니다. 김석현 과장이 빠르게 연락드리겠습니다.'); return false;">
+            <div class="form-grid">
+              <div class="form-group">
+                <label>고객명</label>
+                <input type="text" placeholder="성함을 입력해주세요" required>
+              </div>
+              <div class="form-group">
+                <label>연락처</label>
+                <input type="tel" placeholder="010-0000-0000" required>
+              </div>
+              <div class="form-group">
+                <label>관심 트림</label>
+                <select>
+                  <option>S 350 d 4MATIC</option>
+                  <option selected>S 450 4MATIC (STD / Long)</option>
+                  <option>S 500 4MATIC Long</option>
+                  <option>S 580 4MATIC Long</option>
+                  <option>Maybach S 580 / S 680</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>구매 형태</label>
+                <select>
+                  <option>운용리스 / 금융리스</option>
+                  <option>장기렌트</option>
+                  <option>할부 / 현금</option>
+                  <option>법인 플리트 구매</option>
+                </select>
+              </div>
+              <button type="submit" class="submit-btn">VIP 사전계약 상담 신청하기</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="co-grid">
+          <a href="http://pf.kakao.com/_hTPGX/chat" target="_blank" class="co-btn kakao">
+            <span>💬 카카오톡 1:1 상담</span>
+            <small style="font-weight:normal;">실시간 빠른 답변</small>
+          </a>
+          <a href="tel:01093790999" class="co-btn call">
+            <span>📞 전화 문의하기</span>
+            <small style="font-weight:normal;">010-9379-0999</small>
+          </a>
+          <a href="sms:01093790999" class="co-btn">
+            <span>✉️ 문자 상담 신청</span>
+            <small style="color:var(--silver);">24시간 메세지 접수</small>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer>
+    <div class="container footer-content">
+      <div>
+        <strong style="color: var(--light);">BenzDream 메르세데스-벤츠 공식 세일즈 어드바이저 김석현 과장</strong><br>
+        <span>전화 문의: 010-9379-0999 | 카카오톡 1:1 오픈채팅 상시 대기</span>
+      </div>
+      <div>
+        <span>© 2026 BenzDream. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 이미지 모달 레이어 -->
+  <div id="image-modal" class="modal-overlay" onclick="closeModal()">
+    <img id="modal-img" class="modal-content" src="" alt="확대 이미지">
+  </div>
+
+  <script>
+    /* ---------------------------------------------------------
+       1. 컬러 커스터마이저 스크립트
+       --------------------------------------------------------- */
+    const extChips = document.querySelectorAll('#ext-palette .color-chip');
+    const intChips = document.querySelectorAll('#int-palette .color-chip');
+    const extPreview = document.getElementById('ext-preview-img');
+    const intPreview = document.getElementById('int-preview-img');
+    const extSelectedText = document.getElementById('ext-selected-text');
+    const intSelectedText = document.getElementById('int-selected-text');
+    const totalColorText = document.getElementById('total-color-text');
+
+    let currentExt = "옵시디안 블랙";
+    let currentInt = "블랙 나파 가죽";
+
+    extChips.forEach(chip => {
+      chip.addEventListener('click', function() {
+        extChips.forEach(c => c.classList.remove('active'));
+        this.classList.add('active');
+        currentExt = this.dataset.colorName;
+        extSelectedText.textContent = `외장: ${currentExt}`;
+        if (this.dataset.imgSrc) {
+          extPreview.src = this.dataset.imgSrc;
+          extPreview.style.display = 'block';
+        }
+        updateTotalText();
+      });
+    });
+
+    intChips.forEach(chip => {
+      chip.addEventListener('click', function() {
+        intChips.forEach(c => c.classList.remove('active'));
+        this.classList.add('active');
+        currentInt = this.dataset.colorName;
+        intSelectedText.textContent = `내장: ${currentInt}`;
+        if (this.dataset.imgSrc) {
+          intPreview.src = this.dataset.imgSrc;
+          intPreview.style.display = 'block';
+        }
+        updateTotalText();
+      });
+    });
+
+    function updateTotalText() {
+      totalColorText.textContent = `${currentExt} / ${currentInt}`;
+    }
+
+    /* ---------------------------------------------------------
+       2. 이미지 클릭 모달 스크립트
+       --------------------------------------------------------- */
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+
+    document.querySelectorAll('.clickable-img').forEach(img => {
+      img.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (this.src && this.style.display !== 'none') {
+          modalImg.src = this.src;
+          modal.classList.add('active');
+        }
+      });
+    });
+
+    function closeModal() {
+      modal.classList.remove('active');
+    }
+  </script>
+</body>
+</html>
