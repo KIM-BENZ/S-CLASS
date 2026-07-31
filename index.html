@@ -385,6 +385,11 @@
       padding: 1.8rem;
     }
 
+    .tech-card .img-wrapper {
+      height: 150px;
+      margin-bottom: 1rem;
+    }
+
     .tech-card h4 {
       color: var(--white);
       font-size: 1.1rem;
@@ -448,7 +453,7 @@
       background: #000;
       border-radius: 8px;
       border: 1px solid var(--border);
-      height: 180px;
+      height: auto;
       position: relative;
       overflow: hidden;
       display: flex;
@@ -463,11 +468,9 @@
 
     .design-img-box img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
+      height: auto;
+      display: block;
+      position: static;
       cursor: pointer;
     }
 
@@ -589,7 +592,7 @@
     }
 
     .product-main-img {
-      height: 180px;
+      height: 260px;
       background: #0d0f14;
       border-radius: 8px;
       margin-bottom: 1rem;
@@ -599,6 +602,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .product-main-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .product-main-img span {
+      position: relative;
+      z-index: 0;
     }
 
     .feature-thumbnails {
@@ -766,6 +783,105 @@
       border-top: 1px dashed var(--border);
       font-size: 0.82rem;
       color: var(--gold-light);
+    }
+
+    .launch-grid.launch-grid-detail {
+      grid-template-columns: 1fr;
+    }
+
+    .launch-detail-card {
+      background: var(--card);
+      border: 1px solid rgba(225, 29, 72, 0.35);
+      border-radius: 12px;
+      padding: 1.8rem;
+    }
+
+    .launch-detail-card h4 {
+      font-size: 1.25rem;
+      color: var(--white);
+      margin-bottom: 0.4rem;
+    }
+
+    .launch-disclaimer {
+      font-size: 0.78rem;
+      color: var(--silver);
+      opacity: 0.75;
+      margin-bottom: 1.3rem;
+      line-height: 1.5;
+    }
+
+    .launch-cols {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr 1fr;
+      gap: 1.3rem;
+    }
+
+    .launch-col-title {
+      background: #14171f;
+      border: 1px solid var(--border);
+      border-radius: 6px 6px 0 0;
+      padding: 0.55rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .launch-col-body {
+      border: 1px solid var(--border);
+      border-top: none;
+      border-radius: 0 0 6px 6px;
+      padding: 1rem;
+      height: 100%;
+    }
+
+    .launch-item-label {
+      font-size: 0.8rem;
+      color: var(--gold-light);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .launch-img-box {
+      background: #000;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 0.9rem;
+    }
+
+    .launch-img-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .launch-price-box {
+      background: #14171f;
+      border: 1px solid var(--gold, #c9a15a);
+      border-radius: 6px;
+      padding: 0.7rem 0.9rem;
+      margin: 0.9rem 0;
+      font-size: 0.85rem;
+      color: var(--gold-light);
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .launch-option-list {
+      list-style: none;
+      font-size: 0.8rem;
+      color: var(--silver);
+      line-height: 1.7;
+    }
+
+    .launch-option-list li::before {
+      content: "•";
+      color: var(--gold-light);
+      margin-right: 0.4rem;
+    }
+
+    @media (max-width: 900px) {
+      .launch-cols { grid-template-columns: 1fr; }
     }
 
     /* =========================================================
@@ -1405,7 +1521,6 @@
           </div>
           <div class="design-card-body">
             <div class="design-img-box">
-              <span>[Standard 익스테리어]</span>
               <img src="images/ext-lineup-standard.jpg" alt="Standard 외관" class="clickable-img" onerror="this.style.display='none'">
             </div>
             <p class="design-desc">클래식한 수평 핀 그리드와 삼각별 본넷 오너먼트가 정돈된 플래그십 세단의 클래식한 정수를 보여줍니다.</p>
@@ -1424,7 +1539,6 @@
           </div>
           <div class="design-card-body">
             <div class="design-img-box">
-              <span>[AMG Line 익스테리어]</span>
               <img src="images/ext-lineup-amg.jpg" alt="AMG Line 외관" class="clickable-img" onerror="this.style.display='none'">
             </div>
             <p class="design-desc">스포티한 범퍼 에어 인테이크와 날렵한 스포크 휠이 세단 특유의 감성에 대담하고 역동적인 에너지를 더합니다.</p>
@@ -1443,7 +1557,6 @@
           </div>
           <div class="design-card-body">
             <div class="design-img-box">
-              <span>[Maybach 익스테리어]</span>
               <img src="images/ext-lineup-maybach.jpg" alt="Maybach 외관" class="clickable-img" onerror="this.style.display='none'">
             </div>
             <p class="design-desc">시그니처 버티컬 세로 스트라이프 그릴과 수제작 투톤 페인트, 단조 휠이 차원이 다른 독보적 프레스티지를 완성합니다.</p>
@@ -1712,30 +1825,69 @@
 
       <div class="card-grid-3">
         <div class="tech-card">
+          <div class="img-placeholder img-wrapper">
+            <img src="images/tech-rear-axle-steering.jpg" alt="리어 액슬 스티어링" class="clickable-img" onerror="this.style.display='none'">
+          </div>
           <h4>리어 액슬 스티어링 (Rear-Axle Steering)</h4>
           <p>후륜 조향 시스템이 최대 4.5°~10° 지원되어 대형 세단임에도 불구하고 C-Class 수준의 컴팩트한 회전 반경과 정교한 고속 코너링 안정성을 제공합니다.</p>
         </div>
         <div class="tech-card">
+          <div class="img-placeholder img-wrapper">
+            <img src="images/tech-e-active-body-control.jpg" alt="E-ACTIVE BODY CONTROL" class="clickable-img" onerror="this.style.display='none'">
+          </div>
           <h4>E-ACTIVE BODY CONTROL</h4>
           <p>1초에 1,000회 이상 노면 상태를 감지하여 각 바퀴의 스프링과 댐핑력을 독립적으로 제어, 노면 충격을 완벽하게 흡수하고 롤링 현상을 차단합니다.</p>
         </div>
         <div class="tech-card">
+          <div class="img-placeholder img-wrapper">
+            <img src="images/tech-48v-mhev.jpg" alt="48V 마일드 하이브리드" class="clickable-img" onerror="this.style.display='none'">
+          </div>
           <h4>48V 마일드 하이브리드 (ISG)</h4>
           <p>2세대 통합 스타터 제너레이터(ISG)가 추가 출력을 지원(최대 17kW/200Nm)하여 가속 응답성을 높이고, 시동 시 진동 및 소음을 획기적으로 줄여줍니다.</p>
         </div>
       </div>
     </section>
 
-    <!-- 4. DIGITAL COCKPIT & DIMENSIONS -->
+    <!-- 3.5 ACTIVE & PASSIVE SAFETY -->
     <section>
-      <span class="sec-label">DIGITAL COCKPIT & DIMENSIONS</span>
-      <h2 class="sec-title">디지털 콕핏 혁신 및 전면부 차체 제원 변화</h2>
-      <p class="sec-desc">실내 디지털 디스플레이의 대대적인 업그레이드와 함께 더욱 대담하고 웅장해진 전면부 디자인 비례를 자랑합니다.</p>
+      <span class="sec-label">INTELLIGENT SAFETY</span>
+      <h2 class="sec-title">최고 수준의 센서와 최대 15개 에어백, 안전의 새 기준</h2>
+      <p class="sec-desc">망원·광각·서라운드 카메라, 레이더, 초음파 센서가 결합된 최신 센서 시스템과 3단계 드라이빙 어시스턴스, 그리고 뒷좌석까지 보호하는 PRE-SAFE® 기술로 럭셔리 클래스에 걸맞은 탑승자 보호를 제공합니다.</p>
+
+      <div class="card-grid-3">
+        <div class="tech-card">
+          <div class="img-placeholder img-wrapper">
+            <img src="images/tech-sensor-system.jpg" alt="센서 시스템" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h4>최고 수준의 센서 시스템</h4>
+          <p>서라운드 카메라 4개, 코너 레이더 4개, 초음파 센서 12개, 중거리 레이더 및 인텔리전트 드라이브 컨트롤러가 차량 주변을 빈틈없이 감지하여 정밀하고 예측 가능한 주행을 지원합니다.</p>
+        </div>
+        <div class="tech-card">
+          <div class="img-placeholder img-wrapper">
+            <img src="images/tech-mbdrive-assist.jpg" alt="MB.DRIVE ASSIST" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h4>MB.DRIVE ASSIST 3단계 체계</h4>
+          <p>표준 탑재되는 MB.DRIVE ASSIST(차로 유지·거리 유지)부터, 도심 차로 변경까지 지원하는 PLUS, 복잡한 도심 구간의 포인트 투 포인트 주행을 지원하는 PRO까지 시장별로 선택 가능한 최신 주행 보조 라인업을 제공합니다.</p>
+        </div>
+        <div class="tech-card">
+          <div class="img-placeholder img-wrapper">
+            <img src="images/tech-airbag-presafe.jpg" alt="에어백 & PRE-SAFE" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h4>최대 15개 에어백 & PRE-SAFE®</h4>
+          <p>뒷좌석 에어백·벨트백을 포함한 최대 15개의 에어백과, 충돌 전 탑승자를 유리한 착좌 위치로 이동시키는 PRE-SAFE® 임펄스 및 임펄스 사이드가 기본 사양으로 제공되어 전 좌석 탑승자를 보호합니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. DIGITAL COCKPIT -->
+    <section>
+      <span class="sec-label">DIGITAL COCKPIT</span>
+      <h2 class="sec-title">디지털 콕핏 혁신</h2>
+      <p class="sec-desc">실내 디지털 디스플레이의 대대적인 업그레이드를 자랑합니다.</p>
 
       <div class="cockpit-sub-grid">
         <div class="cockpit-sub-card">
           <div class="img-placeholder img-wrapper">
-            <span>[슈퍼스크린]</span>
             <img src="images/sclass-superscreen.jpg" alt="슈퍼스크린" class="clickable-img" onerror="this.style.display='none'">
           </div>
           <h4 style="color:var(--white);">MBUX 슈퍼스크린</h4>
@@ -1743,7 +1895,6 @@
         </div>
         <div class="cockpit-sub-card">
           <div class="img-placeholder img-wrapper">
-            <span>[앰비언트 라이트]</span>
             <img src="images/sclass-ambient.jpg" alt="앰비언트 라이트" class="clickable-img" onerror="this.style.display='none'">
           </div>
           <h4 style="color:var(--white);">액티브 앰비언트 라이트</h4>
@@ -1751,13 +1902,19 @@
         </div>
         <div class="cockpit-sub-card">
           <div class="img-placeholder img-wrapper">
-            <span>[MB.OS]</span>
             <img src="images/sclass-mbos.jpg" alt="MB.OS" class="clickable-img" onerror="this.style.display='none'">
           </div>
           <h4 style="color:var(--white);">차세대 MB.OS 인포테인먼트</h4>
           <p style="font-size:0.82rem; color:var(--silver);">초고속 5G 네트워크 기반 OTA 업데이트, 3D 내비게이션, 생성형 AI 음성 비서를 지원합니다.</p>
         </div>
       </div>
+    </section>
+
+    <!-- 4.5 BODY DIMENSIONS -->
+    <section>
+      <span class="sec-label">BODY DIMENSIONS</span>
+      <h2 class="sec-title">전면부 차체 제원 변화</h2>
+      <p class="sec-desc">더욱 대담하고 웅장해진 전면부 디자인 비례를 자랑합니다.</p>
 
       <!-- 차체 스펙 비교 박스 -->
       <div class="dimension-box">
@@ -1807,27 +1964,149 @@
       </div>
     </section>
 
+    <!-- 4.7 MBUX & MB.OS DETAIL -->
+    <section>
+      <span class="sec-label">DIGITAL EXPERIENCE</span>
+      <h2 class="sec-title">MBUX & MB.OS, 차세대 디지털 경험의 기반</h2>
+      <p class="sec-desc">제로 레이어 조작부터 AI 비서, 서라운드 내비게이션까지 — 운전자와 뒷좌석 모두를 위한 지능형 사용자 경험을 완성합니다.</p>
+      <div class="cockpit-sub-grid" style="margin-top:1.5rem; grid-template-columns: repeat(2, 1fr);">
+        <div class="cockpit-sub-card">
+          <div class="img-placeholder img-wrapper">
+            <img src="images/mbux-zero-layer.jpg" alt="제로 레이어 & 버추얼 어시스턴트" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h4 style="color:var(--white);">제로 레이어 & MBUX 버추얼 어시스턴트</h4>
+          <p style="font-size:0.82rem; color:var(--silver);">학습형 홈 화면이 주행 상황에 맞는 기능을 하위 메뉴 전환 없이 바로 표시하고, 공감형 AI 비서가 자연어 대화와 개인화된 응대를 지원합니다.</p>
+        </div>
+        <div class="cockpit-sub-card">
+          <div class="img-placeholder img-wrapper">
+            <img src="images/mbux-surround-nav-hud.jpg" alt="서라운드 내비게이션 & AR HUD" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h4 style="color:var(--white);">서라운드 내비게이션 & AR 헤드업 디스플레이</h4>
+          <p style="font-size:0.82rem; color:var(--silver);">차량과 주변 환경을 3차원으로 시각화하는 구글맵 기반 내비게이션과, 경로·차선 정보를 시야에 직접 투사하는 증강현실 HUD를 제공합니다.</p>
+        </div>
+        <div class="cockpit-sub-card">
+          <div class="img-placeholder img-wrapper">
+            <img src="images/mbux-5g-appstore.jpg" alt="5G & 인카 앱스토어" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h4 style="color:var(--white);">5G & 인카 앱스토어</h4>
+          <p style="font-size:0.82rem; color:var(--silver);">최고 수준의 5G 데이터 연결과 오디오·비디오·생산성 등 40개 이상의 앱을 지원하는 In-Car App Store, 화상 회의용 셀피 카메라를 갖췄습니다.</p>
+        </div>
+        <div class="cockpit-sub-card">
+          <div class="img-placeholder img-wrapper">
+            <img src="images/mbux-rear-entertainment.jpg" alt="뒷좌석 MBUX 엔터테인먼트" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+          <h4 style="color:var(--white);">뒷좌석 MBUX 엔터테인먼트</h4>
+          <p style="font-size:0.82rem; color:var(--silver);">13.1인치 고정 디스플레이 2개, MBUX 리모컨, HDMI 연결, 통합 카메라를 통해 뒷좌석에서도 화상 회의와 미디어 감상이 가능합니다.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- 5. LAUNCH EDITION -->
     <section>
       <span class="sec-label">LIMITED EDITION</span>
       <h2 class="sec-title">최초 출시 기념 Launch Edition 라인업</h2>
       <p class="sec-desc">페이스리프트 초기 도입을 기념하여 한정 수량으로 생산되는 특별 익스클루시브 에디션입니다.</p>
 
-      <div class="launch-grid">
-        <div class="launch-card">
+      <div class="launch-grid launch-grid-detail">
+        <div class="launch-detail-card">
           <span class="launch-badge">140대 한정 생산</span>
-          <h4>S 450 4MATIC L AMG Line (AMG 라인 플러스)</h4>
-          <p>AMG 라인 플러스 패키지, 다크 크롬 익스테리어 그릴, 나이트 패키지 및 20인치 AMG 전용 휠을 탑재하여 스포티한 감성을 극대화했습니다.</p>
-          <div class="launch-specs">
-            • 전용 옵션: 나이트 패키지, 다크 라디에이터 그릴, 20인치 AMG 멀티스포크 휠, 블랙 익스테리어 트림
+          <h4>S 450 4M L AMG Line Launch Edition "AMG 라인 플러스 에디션"</h4>
+          <p class="launch-disclaimer">해당 차량에 적용된 코드 956, 216, B29, P55, RTX, 73H, 803A는 별도로 선택이 불가능한, 오직 런치 에디션만을 위한 옵션 사양입니다.</p>
+
+          <div class="launch-cols">
+            <div>
+              <div class="launch-col-title">외장 하이라이트</div>
+              <div class="launch-col-body">
+                <div class="launch-item-label">MANUFAKTUR 오팔라이트 화이트 브라이트 (885U)</div>
+                <div class="launch-img-box">
+                  <img src="images/launch1-exterior.jpg" alt="AMG 라인 플러스 에디션 외장" onerror="this.style.display='none'">
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="launch-col-title">내장 하이라이트</div>
+              <div class="launch-col-body">
+                <div class="launch-item-label">나파 가죽, AMG 라인 플러스, 블랙 (803A)</div>
+                <div class="launch-img-box">
+                  <img src="images/launch1-interior-seat.jpg" alt="AMG 라인 플러스 에디션 시트" onerror="this.style.display='none'">
+                </div>
+                <div class="launch-item-label" style="margin-top:0.8rem;">하이-글로스 실버 메탈릭 믹스드 화이버 트림 (73H)</div>
+                <div class="launch-img-box">
+                  <img src="images/launch1-interior-trim.jpg" alt="AMG 라인 플러스 에디션 트림" onerror="this.style.display='none'">
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="launch-col-title">22316512-KR2 (140대)</div>
+              <div class="launch-col-body">
+                <p style="font-size:0.82rem; color:var(--silver); line-height:1.7;">
+                  외장 - MANUFAKTUR 오팔라이트 화이트 브라이트 (885U)<br>
+                  내장 - 나파 가죽, AMG 라인 플러스, 블랙 (803A)
+                </p>
+                <div class="launch-price-box">AMG Line Plus (956): 7,600,000원</div>
+                <ul class="launch-option-list">
+                  <li>AMG 라인 플러스 (956)</li>
+                  <li>Digital Extra: 리어 액슬 스티어링(10°) (216)</li>
+                  <li>라디에이터 그릴, 다크 크롬 (B29)</li>
+                  <li>나이트 패키지 (P55)</li>
+                  <li>단열 틴티드 글래스 삭제 (U50)</li>
+                  <li>20인치 AMG 크로스 스포크 경량 알로이 휠 (RTX)</li>
+                  <li>하이-글로스 실버 메탈릭 믹스드 화이버 트림 (73H)</li>
+                  <li>MANUFAKTUR 오팔라이트 화이트 브라이트 (885U)</li>
+                  <li>나파 가죽, AMG 라인 플러스, 블랙 (803A)</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="launch-card">
+
+        <div class="launch-detail-card">
           <span class="launch-badge">140대 한정 생산</span>
-          <h4>S 500 4MATIC L (MANUFAKTUR 스파클링 블랙)</h4>
-          <p>MANUFAKTUR 전용 스파클링 블랙 외장 컬러와 최상급 익스클루시브 패키지(P34)가 결합된 완벽한 럭셔리 에디션입니다.</p>
-          <div class="launch-specs">
-            • 전용 옵션: MANUFAKTUR 페인트, 최상급 익스클루시브 나파 가죽 패키지, 최고급 알칸타라 헤드라이너
+          <h4>S 500 4M L Launch Edition "MANUFAKTUR 스파클링 블랙 에디션"</h4>
+          <p class="launch-disclaimer">해당 차량에 적용된 코드 944U, P34, 525A, 65U, U04, 735, B05는 별도로 선택이 불가능한, 오직 런치 에디션만을 위한 옵션 사양입니다.</p>
+
+          <div class="launch-cols">
+            <div>
+              <div class="launch-col-title">외장 하이라이트</div>
+              <div class="launch-col-body">
+                <div class="launch-item-label">MANUFAKTUR 스파클링 블랙 (944U)</div>
+                <div class="launch-img-box">
+                  <img src="images/launch2-exterior.jpg" alt="MANUFAKTUR 스파클링 블랙 에디션 외장" onerror="this.style.display='none'">
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="launch-col-title">내장 하이라이트</div>
+              <div class="launch-col-body">
+                <div class="launch-item-label">익스클루시브 나파 가죽, 마카오 베이지/마그마 그레이 (525A)</div>
+                <div class="launch-img-box">
+                  <img src="images/launch2-interior-seat.jpg" alt="MANUFAKTUR 스파클링 블랙 에디션 시트" onerror="this.style.display='none'">
+                </div>
+                <div class="launch-item-label" style="margin-top:0.8rem;">유광 월넛 우드 트림, 블랙 (H37)</div>
+                <div class="launch-img-box">
+                  <img src="images/launch2-interior-trim.jpg" alt="MANUFAKTUR 스파클링 블랙 에디션 트림" onerror="this.style.display='none'">
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="launch-col-title">22316412-KR1 (140대)</div>
+              <div class="launch-col-body">
+                <p style="font-size:0.82rem; color:var(--silver); line-height:1.7;">
+                  외장 - MANUFAKTUR 스파클링 블랙 (944U)<br>
+                  내장 - 익스클루시브 나파 가죽, 마카오 베이지/마그마 그레이 (525A)
+                </p>
+                <div class="launch-price-box">Exclusive Package (P34): 19,000,000원</div>
+                <ul class="launch-option-list">
+                  <li>익스클루시브 패키지 (P34)</li>
+                  <li>마이크로컷 루프 라이닝, 마카오 베이지 (65U)</li>
+                  <li>플로어 매트 (U04)</li>
+                  <li>익스클루시브 트림 패키지 (735)</li>
+                  <li>크롬 핸들 및 스테인리스 스틸로 마감된 로딩 실 (B05)</li>
+                  <li>MANUFAKTUR 스파클링 블랙 (944U)</li>
+                  <li>익스클루시브 나파 가죽, 마카오 베이지/마그마 그레이 (525A)</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1976,6 +2255,30 @@
       </div>
     </section>
 
+    <!-- 8.5 REAR SEAT COMFORT -->
+    <section>
+      <span class="sec-label">FIRST-CLASS REAR COMFORT</span>
+      <h2 class="sec-title">성공을 위해 설계된 뒷좌석 공간</h2>
+      <p class="sec-desc">S-Class의 뒷좌석은 럭셔리 세단을 차별화하는 핵심 요소입니다. 트림에 따라 선택 가능한 컴포트 패키지로 이동 중에도 퍼스트 클래스 수준의 휴식과 업무 환경을 완성합니다.</p>
+
+      <div class="maybach-card">
+        <div class="maybach-grid">
+          <div class="maybach-item">
+            <h4>뒷좌석 컴포트 패키지 (PAT)</h4>
+            <p>앞·뒷좌석 디자이너 안전벨트 버클, 뒷좌석 서모트로닉 자동 공조, 무선 충전, MBUX 리모컨, 뒷좌석 에어백·사이드 에어백, 디지털 벤트 컨트롤이 포함됩니다.</p>
+          </div>
+          <div class="maybach-item">
+            <h4>뒷좌석 컴포트 플러스 패키지 (PAW)</h4>
+            <p>마사지 기능이 포함된 멀티컨투어 시트, 6방향 조절 럭셔리 헤드레스트, 목과 어깨 열선 기능에 더해 이그제큐티브 시트(최대 43.5° 리클라이닝)와 쇼퍼 패키지를 제공합니다.</p>
+          </div>
+          <div class="maybach-item">
+            <h4>퍼스트 클래스 4인승 공간</h4>
+            <p>뒷좌석 전체를 아우르는 풀렝스 비즈니스 센터 콘솔과 접이식 테이블, 13.1인치 MBUX 하이엔드 뒷좌석 엔터테인먼트 디스플레이 2개로 이동 중에도 업무와 휴식을 모두 지원합니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- 9. MAYBACH SPECIAL SECTION -->
     <section>
       <span class="sec-label">MAYBACH EXCLUSIVE</span>
@@ -2066,6 +2369,71 @@
               <td>V12 가솔린 바이터보</td>
               <td>4MATIC</td>
               <td>MANUFAKTUR 전용 실내, V12 엔진 패키지, 수제작 투톤 컬러 트림</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 10.5 COMPETITOR COMPARISON -->
+    <section>
+      <span class="sec-label">COMPETITIVE EDGE</span>
+      <h2 class="sec-title">럭셔리 세단 경쟁 비교</h2>
+      <p class="sec-desc">Audi A8, BMW 7시리즈, 제네시스 G90과 신형 S-Class의 주요 기준을 비교합니다. 더 넓은 파워트레인 라인업과 세그먼트 최대 조향각, 압도적인 뒷좌석 경험이 S-Class만의 차별점입니다.</p>
+
+      <div class="table-wrapper" style="margin-top:1.5rem;">
+        <table>
+          <thead>
+            <tr>
+              <th>기준</th>
+              <th>Audi A8</th>
+              <th>BMW 7시리즈</th>
+              <th>제네시스 G90</th>
+              <th>Mercedes-Benz S-Class</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>휠베이스 구성</strong></td>
+              <td>A8 / A8 L</td>
+              <td>SWB / LWB</td>
+              <td>단일 버전(LWB)</td>
+              <td>세 가지 명확히 구분된 라인업 (W/V/Z)</td>
+            </tr>
+            <tr>
+              <td><strong>파워트레인</strong></td>
+              <td>휘발유, MHEV, PHEV</td>
+              <td>휘발유, PHEV, BEV</td>
+              <td>휘발유</td>
+              <td>휘발유, 디젤, PHEV — 플랫폼 변경 없는 최다 라인업</td>
+            </tr>
+            <tr>
+              <td><strong>PHEV 전기 주행거리</strong></td>
+              <td>약 60km</td>
+              <td>약 70~80km</td>
+              <td>–</td>
+              <td><span class="dim-badge">최대 약 100km</span></td>
+            </tr>
+            <tr>
+              <td><strong>뒤차축 스티어링</strong></td>
+              <td>최대 5°</td>
+              <td>최대 3.5°</td>
+              <td>약 4°</td>
+              <td><span class="dim-badge">최대 10° (세그먼트 최대)</span></td>
+            </tr>
+            <tr>
+              <td><strong>뒷좌석 엔터테인먼트</strong></td>
+              <td>10.1인치</td>
+              <td>31.3인치 시어터 스크린(단일)</td>
+              <td>10.3인치</td>
+              <td>13.1인치 카메라 포함 디스플레이 2개(개별 좌석)</td>
+            </tr>
+            <tr>
+              <td><strong>헤드업 디스플레이</strong></td>
+              <td>클래식</td>
+              <td>AR-HUD</td>
+              <td>클래식</td>
+              <td>MBUX 증강현실 HUD 통합</td>
             </tr>
           </tbody>
         </table>
