@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The new S-Class MY27 종합 가이드북 & 사전계약</title>
+  <title>The new S-Class MY27 종합 가이드북</title>
   
   <!-- Open Graph & 메타 태그 -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="THE NEW S-CLASS MY27 페이스리프트 종합 가이드 & 사전계약">
-  <meta property="og:description" content="신형 S-Class MY27 사전계약 혜택, MBUX 슈퍼스크린, 런치 에디션, 트림별 가격 및 제원 상세 옵션 매트릭스">
+  <meta property="og:title" content="THE NEW S-CLASS MY27 페이스리프트 종합 가이드">
+  <meta property="og:description" content="신형 S-Class MY27 MBUX 슈퍼스크린, 트림별 가격 및 제원, 상세 옵션 매트릭스">
   <meta property="og:image" content="https://kim-benz.github.io/S-CLASS/images/hero-sclass.png">
   <meta property="og:url" content="https://kim-benz.github.io/S-CLASS/">
   <meta property="og:site_name" content="벤츠 전시장">
@@ -378,6 +378,22 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
+    }
+
+    /* 4장 한 줄 배치 (페이스리프트 추가 사양) */
+    .card-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+    }
+    .card-grid-4 .tech-card {
+      padding: 1.3rem;
+    }
+    .card-grid-4 .tech-card h4 {
+      font-size: 1rem;
+    }
+    .card-grid-4 .tech-card p {
+      font-size: 0.82rem;
     }
 
     .tech-card {
@@ -1444,6 +1460,173 @@
       white-space: nowrap;
     }
 
+    /* 컬러 커스터마이저 보강 (모델 탭 / 미리보기 / 접근성) */
+    .color-section {
+      margin: 3rem 0;
+    }
+
+    .color-model-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .color-model-tab {
+      background: var(--navy);
+      border: 1px solid var(--border);
+      color: var(--silver);
+      padding: 0.45rem 0.95rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-family: inherit;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+
+    .color-model-tab:hover {
+      color: var(--white);
+      border-color: var(--gold-dim);
+    }
+
+    .color-model-tab.active {
+      color: var(--white);
+      border-color: var(--gold);
+      background: var(--card2);
+    }
+
+    .color-chip {
+      appearance: none;
+      -webkit-appearance: none;
+      padding: 0;
+    }
+
+    .color-chip:focus-visible,
+    .color-model-tab:focus-visible {
+      outline: 2px solid var(--gold-light);
+      outline-offset: 2px;
+    }
+
+    .color-preview-box img {
+      object-fit: contain;
+      background: #0b0c0e;
+    }
+
+    .color-note {
+      font-size: 0.78rem;
+      color: var(--silver);
+      opacity: 0.8;
+      margin-top: 0.9rem;
+      line-height: 1.5;
+    }
+
+    /* ===== 이동 메뉴 ===== */
+    html {
+      scroll-padding-top: calc(var(--header-h, 61px) + var(--nav-h, 44px) + 8px);
+    }
+    .page-nav {
+      position: sticky;
+      top: var(--header-h, 61px);
+      z-index: 99;
+      background-color: rgba(8, 9, 14, 0.92);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+    .page-nav-inner {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 0.3rem;
+      overflow-x: auto;
+      padding: 0.35rem 1.5rem;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    .page-nav-inner::-webkit-scrollbar { display: none; }
+    .page-nav a {
+      flex: 0 0 auto;
+      color: var(--silver);
+      text-decoration: none;
+      font-size: 0.82rem;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      white-space: nowrap;
+      transition: color 0.2s, background 0.2s;
+    }
+    .page-nav a:hover { color: var(--white); }
+    .page-nav a.active {
+      color: var(--white);
+      background: var(--card2);
+      box-shadow: inset 0 0 0 1px var(--gold-dim);
+    }
+
+    /* ===== 표 공통 보조 ===== */
+    .table-note {
+      font-size: 0.78rem;
+      color: var(--silver);
+      opacity: 0.8;
+      margin-top: 0.9rem;
+      line-height: 1.5;
+    }
+    .inline-link {
+      color: var(--gold-light);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .spec-sub-title {
+      margin: 2.4rem 0 0.8rem;
+      font-size: 0.75rem;
+      color: var(--gold);
+      font-family: 'MBK CorpoA', serif;
+      letter-spacing: 2px;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid rgba(199, 203, 209, 0.25);
+    }
+    .spec-table th:not(:first-child),
+    .spec-table td:not(:first-child) { text-align: center; }
+    .spec-table small { color: var(--silver); font-size: 0.72rem; }
+    .price-table td:first-child { color: var(--white); font-weight: 600; }
+    .price-table td.price-cell { color: var(--white); font-weight: 700; white-space: nowrap; }
+
+    /* ===== 컬러: 트림 그룹 / 3열 미리보기 ===== */
+    .color-control-wide { grid-column: 1 / -1; }
+    .color-preview-container { grid-template-columns: 2fr 1fr 1fr; }
+
+    /* ===== 카탈로그 ===== */
+    .catalog-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.6rem 1.8rem;
+    }
+    .catalog-text { display: flex; flex-direction: column; gap: 0.3rem; }
+    .catalog-text strong { color: var(--white); font-size: 1.1rem; font-weight: 600; }
+    .catalog-text span { color: var(--silver); font-size: 0.85rem; }
+    .catalog-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.7rem;
+      border-radius: 8px;
+      background: var(--gold);
+      color: #0b0c0e;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .catalog-btn:hover { background: var(--gold-light); transform: translateY(-2px); }
+    @media (max-width: 640px) {
+      .catalog-btn { width: 100%; }
+      .page-nav-inner { padding: 0.3rem 0.75rem; }
+    }
+
     /* Modal Overlay (이미지 확대용 모달) */
     .modal-overlay {
       display: none;
@@ -1472,10 +1655,20 @@
     /* =========================================================
        RESPONSIVE — 모바일 대응
        ========================================================= */
-    html, body { overflow-x: hidden; width: 100%; }
+    /* html+body 둘 다 overflow-x:hidden이면 sticky 헤더가 고정되지 않아 body는 clip 사용 */
+    html { overflow-x: hidden; width: 100%; }
+    body { overflow-x: clip; width: 100%; }
 
     @media (max-width: 1024px) {
       .upgrade-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 960px) {
+      .card-grid-4 { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .card-grid-4 { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 960px) {
@@ -1901,6 +2094,24 @@
     </div>
   </header>
 
+  <!-- 페이지 내 이동 메뉴 -->
+  <nav class="page-nav" id="page-nav" aria-label="페이지 내 이동">
+    <div class="page-nav-inner">
+      <a href="#highlights">핵심 혁신</a>
+      <a href="#price">가격</a>
+      <a href="#lineup">라인업</a>
+      <a href="#color">컬러</a>
+      <a href="#design">디자인</a>
+      <a href="#power">파워트레인</a>
+      <a href="#safety">안전</a>
+      <a href="#cockpit">콕핏</a>
+      <a href="#maybach">마이바흐</a>
+      <a href="#options">옵션</a>
+      <a href="#catalog">카탈로그</a>
+      <a href="#contact">상담</a>
+    </div>
+  </nav>
+
   <!-- 히어로 섹션 -->
   <section class="hero">
     <img src="images/hero-sclass.png" alt="The new S-Class" class="hero-img clickable-img">
@@ -1910,13 +2121,13 @@
       <h1 class="hero-title">The new S-Class MY27</h1>
       <p class="hero-sub">플래그십 세단의 새로운 기준, 더욱 대담해진 존재감과 디지털 혁신</p>
 
-      <!-- 사전계약 혜택 종합 카운터 -->
+      <!-- 출시 혜택 종합 카운터 -->
       <div class="preorder-card">
         <div class="po-core-grid">
           <div class="po-item">
-            <div class="po-label">PRE-ORDER START</div>
+            <div class="po-label">OFFICIAL LAUNCH</div>
             <div class="po-val">2026년 8월 공식 출시</div>
-            <div class="po-sub">계약금 500만원 (전액 환불 가능)</div>
+            <div class="po-sub">S-Class 6종 · Maybach 3종 라인업</div>
           </div>
           <div class="po-item">
             <div class="po-label">RETENTION BENEFIT</div>
@@ -1942,7 +2153,7 @@
     </section>
 
     <!-- KEY UPGRADES (최상단 요약 배너 - 5가지 프레임) -->
-    <div class="upgrade-banner">
+    <div class="upgrade-banner" id="highlights">
       <div class="upgrade-header">
         <span class="upgrade-header-tag">KEY UPGRADES</span>
         <h2 class="upgrade-header-title">The new S-Class를 완성하는 5가지 핵심 혁신</h2>
@@ -2001,7 +2212,7 @@
       <span class="sec-label">MORE FACELIFT UPGRADES</span>
       <h2 class="sec-title">전 모델 기본으로 더해진 그 외 사양</h2>
       <p class="sec-desc">위 5가지 핵심 혁신 외에도, 페이스리프트를 통해 다음 사양들이 전 모델 기본으로 새롭게 적용되었습니다.</p>
-      <div class="card-grid-3">
+      <div class="card-grid-4">
         <div class="tech-card">
           <div class="img-wrapper img-placeholder">
             <img src="images/feat-heated-belt.jpg" alt="앞좌석 열선 벨트" class="clickable-img" onerror="this.style.display='none'">
@@ -2033,8 +2244,42 @@
       </div>
     </section>
 
+    <!-- 1.8 PRICE AT A GLANCE -->
+    <section id="price">
+      <span class="sec-label">PRICE AT A GLANCE</span>
+      <h2 class="sec-title">트림별 가격 한눈에 보기</h2>
+      <p class="sec-desc">S-Class 6개 트림과 Mercedes-Maybach 3개 트림의 권장 소비자가격입니다. 트림별 상세 사양은 아래 <a href="#lineup" class="inline-link">라인업</a>에서 확인하실 수 있습니다.</p>
+      <div class="scroll-hint">← 옆으로 스크롤하여 전체 내용을 확인하세요 →</div>
+      <div class="table-wrapper">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>모델</th>
+              <th>구분</th>
+              <th>엔진</th>
+              <th>권장 소비자가</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="category-row"><td colspan="4">Mercedes-Benz S-Class</td></tr>
+            <tr><td>S 350 d 4MATIC</td><td>스탠다드 휠베이스</td><td>직렬 6기통 디젤</td><td class="price-cell">1억 5,400만원</td></tr>
+            <tr><td>S 450 4MATIC</td><td>스탠다드 휠베이스 · AMG Line</td><td>직렬 6기통 가솔린</td><td class="price-cell">1억 6,240만원</td></tr>
+            <tr><td>S 450 4MATIC Long</td><td>롱 휠베이스 · Exclusive</td><td>직렬 6기통 가솔린</td><td class="price-cell">1억 7,540만원</td></tr>
+            <tr><td>S 450 4MATIC Long</td><td>롱 휠베이스 · AMG Line</td><td>직렬 6기통 가솔린</td><td class="price-cell">1억 9,540만원</td></tr>
+            <tr><td>S 500 4MATIC Long</td><td>롱 휠베이스</td><td>직렬 6기통 가솔린</td><td class="price-cell">2억 2,000만원</td></tr>
+            <tr><td>S 580 4MATIC Long</td><td>롱 휠베이스</td><td>V8 가솔린</td><td class="price-cell">2억 7,000만원</td></tr>
+            <tr class="category-row"><td colspan="4">Mercedes-Maybach S-Class</td></tr>
+            <tr><td>M-Maybach S 580</td><td>마이바흐</td><td>V8 바이터보</td><td class="price-cell">3억 1,700만원</td></tr>
+            <tr><td>M-Maybach S 580 MANUFAKTUR</td><td>마이바흐 · MANUFAKTUR</td><td>V8 바이터보</td><td class="price-cell">3억 3,600만원</td></tr>
+            <tr><td>M-Maybach S 680</td><td>마이바흐</td><td>V12 바이터보</td><td class="price-cell">4억 700만원</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">※ 권장 소비자가격(부가세 포함) 기준 · 2026년 8월 13일 발효 · 개별소비세 5% 기준이며 정책에 따라 변동될 수 있습니다.</p>
+    </section>
+
     <!-- 2. PRODUCT LINE-UP -->
-    <section>
+    <section id="lineup">
       <span class="sec-label">PRODUCT LINE-UP</span>
       <h2 class="sec-title">MY27 세부 트림별 사양 및 패키지 구성을 한눈에</h2>
       <p class="sec-desc">휠베이스 및 파워트레인에 따른 표준 익스테리어, 인테리어 가죽, 휠 스펙 및 핵심 기본 적용 사양입니다.<br>
@@ -2283,8 +2528,68 @@
       </div>
     </section>
 
+    <!-- 2.5 COLOR CUSTOMIZER -->
+    <section class="color-section" id="color">
+      <span class="sec-label">COLOR CUSTOMIZATION</span>
+      <h2 class="sec-title">익스테리어 & 인테리어 컬러 선택</h2>
+      <p class="sec-desc">시트 가죽은 선택한 모델에서 고를 수 있는 종류만 표시됩니다. 색상 칩을 눌러 조합을 확인해 보세요.</p>
+
+      <div class="color-model-tabs" id="color-model-tabs" role="tablist" aria-label="모델 선택"></div>
+
+      <div class="color-controls">
+        <div class="color-control-group">
+          <h3>• 외장 익스테리어 페인트 (Exterior Colors)</h3>
+          <div class="color-palette" id="ext-palette"></div>
+          <div class="selected-color-title" id="ext-selected-text"></div>
+        </div>
+
+        <div class="color-control-group">
+          <h3>• 인테리어 시트 & 가죽 (Interior Upholstery)</h3>
+          <div class="color-palette" id="int-palette"></div>
+          <div class="selected-color-title" id="int-selected-text"></div>
+        </div>
+
+        <div class="color-control-group color-control-wide">
+          <h3>• 인테리어 트림 (Interior Trim)</h3>
+          <div class="color-palette" id="trim-palette"></div>
+          <div class="selected-color-title" id="trim-selected-text"></div>
+        </div>
+      </div>
+
+      <div class="color-preview-container">
+        <div class="preview-wrapper">
+          <span class="preview-label">익스테리어 뷰</span>
+          <div class="img-placeholder color-preview-box">
+            <span>[외장 차량 사진]</span>
+            <img id="ext-preview-img" src="" alt="외장 차량 사진" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <div class="preview-wrapper">
+          <span class="preview-label">인테리어 뷰</span>
+          <div class="img-placeholder color-preview-box">
+            <span>[인테리어 시트 사진]</span>
+            <img id="int-preview-img" src="" alt="인테리어 시트 사진" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <div class="preview-wrapper">
+          <span class="preview-label">인테리어 트림 뷰</span>
+          <div class="img-placeholder color-preview-box">
+            <span>[인테리어 트림 사진]</span>
+            <img id="trim-preview-img" src="" alt="인테리어 트림 사진" class="clickable-img" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+
+      <div class="color-summary-bar">
+        🎨 <strong>최종 선택 조합:</strong> <span id="total-color-text"></span>
+      </div>
+      <p class="color-note">※ 인테리어 트림은 모델별 기본 적용 사양을 기준으로 안내하며, 변경 가능 여부는 상담 시 안내드립니다. 색상 추가비용은 참고용이며 출고 시점의 공식 가격표·정책에 따라 달라질 수 있습니다. 화면의 색상은 실제와 다를 수 있습니다.</p>
+    </section>
+
     <!-- 1. EXTERIOR DESIGN LINE-UP -->
-    <section>
+    <section id="design">
       <span class="sec-label">DESIGN LINE-UP</span>
       <h2 class="sec-title">외관 디자인 익스테리어 라인업</h2>
       <p class="sec-desc">고객의 취향과 라이프스타일에 맞춘 Standard, AMG Line, 그리고 Maybach 전용 익스테리어 테마를 제공합니다.</p>
@@ -2449,7 +2754,7 @@
     </section>
 
     <!-- 6. POWERTRAIN LINEUP -->
-    <section>
+    <section id="power">
       <span class="sec-label">POWER & PERFORMANCE</span>
       <h2 class="sec-title">트림별 파워트레인 제원 비교</h2>
       <p class="sec-desc">디젤, 가솔린, 그리고 최고급 V12 엔진까지 완벽하게 정제된 성능을 갖췄습니다.</p>
@@ -2461,7 +2766,7 @@
           <p style="font-size: 0.85rem; color: var(--silver);">강력한 토크와 검증된 연비 효율을 선사하는 직렬 6기통 디젤엔진</p>
           <ul class="engine-stats">
             <li><span>엔진 형식</span> <span>OM656M EVO I6 Turbo Diesel</span></li>
-            <li><span>출력</span> <span>확인 중</span></li>
+            <li><span>출력</span> <span>313 + 23 마력</span></li>
             <li><span>토크</span> <span>66.3 kg·m</span></li>
             <li><span>변속기</span> <span>9G-TRONIC</span></li>
             <li><span>구동 방식</span> <span>4MATIC</span></li>
@@ -2476,7 +2781,7 @@
           <p style="font-size: 0.85rem; color: var(--silver);">매끄러운 가속감과 압도적 정숙성을 자랑하는 6기통 가솔린 터보</p>
           <ul class="engine-stats">
             <li><span>엔진 형식</span> <span>M256M EVO I6 Turbo Gasoline</span></li>
-            <li><span>출력</span> <span>381 ps ~ 449 ps</span></li>
+            <li><span>출력</span> <span>381 + 23 ~ 449 + 23 마력</span></li>
             <li><span>토크</span> <span>57.1 kg·m ~ 61.2 kg·m</span></li>
             <li><span>변속기</span> <span>9G-TRONIC</span></li>
             <li><span>구동 방식</span> <span>4MATIC</span></li>
@@ -2500,10 +2805,40 @@
           </ul>
         </div>
       </div>
+
+      <div class="spec-sub-title">모델별 제원 비교</div>
+      <div class="scroll-hint">← 옆으로 스크롤하여 전체 트림을 확인하세요 →</div>
+      <div class="table-wrapper sticky-col">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th style="min-width:110px;">구분</th>
+              <th>S 350 d 4M</th>
+              <th>S 450 4M</th>
+              <th>S 450 4M L<br><span style="font-size:0.7rem;color:var(--silver);font-weight:400;">Exclusive · AMG Line</span></th>
+              <th>S 500 4M L</th>
+              <th>S 580 4M L</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>엔진</td><td>OM 656 M EVO</td><td>M 256 M EVO</td><td>M 256 M EVO</td><td>M 256 M EVO</td><td>M 177 EVO</td></tr>
+            <tr><td>형식</td><td>직렬 6 디젤</td><td>직렬 6 가솔린</td><td>직렬 6 가솔린</td><td>직렬 6 가솔린</td><td>V8 가솔린</td></tr>
+            <tr><td>배기량</td><td>2,989cc</td><td>2,999cc</td><td>2,999cc</td><td>2,999cc</td><td>3,982cc</td></tr>
+            <tr><td>최고출력</td><td>313 + 23 마력</td><td>381 + 23 마력</td><td>381 + 23 마력</td><td>449 + 23 마력</td><td>537 + 23 마력</td></tr>
+            <tr><td>최대토크</td><td>650 Nm<br><small>(66.3 kg·m)</small></td><td>560 Nm<br><small>(57.1 kg·m)</small></td><td>560 Nm<br><small>(57.1 kg·m)</small></td><td>600 Nm<br><small>(61.2 kg·m)</small></td><td>750 Nm<br><small>(76.5 kg·m)</small></td></tr>
+            <tr><td>0-100km/h</td><td>5.4초</td><td>4.9초</td><td>4.9초</td><td>4.5초</td><td>4.0초</td></tr>
+            <tr><td>복합연비</td><td>13.0 km/L</td><td>10.1 km/L</td><td>9.6 km/L</td><td>9.8 km/L</td><td>7.8 km/L</td></tr>
+            <tr><td>연비 등급</td><td>3등급</td><td>4등급</td><td>4등급</td><td>4등급</td><td>5등급</td></tr>
+            <tr><td>CO₂</td><td>148 g/km</td><td>170 g/km</td><td>179 g/km</td><td>174 g/km</td><td>224 g/km</td></tr>
+            <tr><td>공차중량</td><td>2,260 kg</td><td>2,195 kg</td><td>2,220 kg</td><td>2,225 kg</td><td>2,310 kg</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">※ 전 모델 4MATIC 상시 4륜구동 · 9단 자동변속기 기준입니다. 연비·CO₂는 국내 인증 기준이며 실주행 조건에 따라 달라질 수 있습니다.</p>
     </section>
 
     <!-- 3.5 ACTIVE & PASSIVE SAFETY -->
-    <section>
+    <section id="safety">
       <span class="sec-label">INTELLIGENT SAFETY</span>
       <h2 class="sec-title">최고 수준의 센서와 최대 15개 에어백, 안전의 새 기준</h2>
       <p class="sec-desc">망원·광각·서라운드 카메라, 레이더, 초음파 센서가 결합된 최신 센서 시스템과 3단계 드라이빙 어시스턴스, 그리고 뒷좌석까지 보호하는 PRE-SAFE® 기술로 럭셔리 클래스에 걸맞은 탑승자 보호를 제공합니다.</p>
@@ -2534,7 +2869,7 @@
     </section>
 
     <!-- 4. DIGITAL COCKPIT -->
-    <section>
+    <section id="cockpit">
       <span class="sec-label">DIGITAL COCKPIT</span>
       <h2 class="sec-title">디지털 콕핏 혁신</h2>
       <p class="sec-desc">실내 디지털 디스플레이의 대대적인 업그레이드를 자랑합니다.</p>
@@ -2634,119 +2969,9 @@
       </div>
     </section>
 
-    <!-- 5. LAUNCH EDITION -->
-    <section>
-      <span class="sec-label">LIMITED EDITION</span>
-      <h2 class="sec-title">최초 출시 기념 Launch Edition 라인업</h2>
-      <p class="sec-desc">페이스리프트 초기 도입을 기념하여 한정 수량으로 생산되는 특별 익스클루시브 에디션입니다.</p>
-
-      <div class="launch-grid launch-grid-detail">
-        <div class="launch-detail-card">
-          <span class="launch-badge">140대 한정 생산</span>
-          <h4>S 450 4M L AMG Line Launch Edition "AMG 라인 플러스 에디션"</h4>
-          <p class="launch-disclaimer">해당 차량에 적용된 코드 956, 216, B29, P55, RTX, 73H, 803A는 별도로 선택이 불가능한, 오직 런치 에디션만을 위한 옵션 사양입니다.</p>
-
-          <div class="launch-cols">
-            <div>
-              <div class="launch-col-title">외장 하이라이트</div>
-              <div class="launch-col-body">
-                <div class="launch-item-label">MANUFAKTUR 오팔라이트 화이트 브라이트 (885U)</div>
-                <div class="launch-img-box launch-img-box-tall">
-                  <img src="images/launch1-exterior.jpg" alt="AMG 라인 플러스 에디션 외장" class="clickable-img" onerror="this.style.display='none'">
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="launch-col-title">내장 하이라이트</div>
-              <div class="launch-col-body">
-                <div class="launch-item-label">나파 가죽, AMG 라인 플러스, 블랙 (803A)</div>
-                <div class="launch-img-box">
-                  <img src="images/launch1-interior-seat.jpg" alt="AMG 라인 플러스 에디션 시트" class="clickable-img" onerror="this.style.display='none'">
-                </div>
-                <div class="launch-item-label" style="margin-top:0.8rem;">하이-글로스 실버 메탈릭 믹스드 화이버 트림 (73H)</div>
-                <div class="launch-img-box">
-                  <img src="images/launch1-interior-trim.jpg" alt="AMG 라인 플러스 에디션 트림" class="clickable-img" onerror="this.style.display='none'">
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="launch-col-title">22316512-KR2 (140대)</div>
-              <div class="launch-col-body">
-                <p style="font-size:0.82rem; color:var(--silver); line-height:1.7;">
-                  외장 - MANUFAKTUR 오팔라이트 화이트 브라이트 (885U)<br>
-                  내장 - 나파 가죽, AMG 라인 플러스, 블랙 (803A)
-                </p>
-                <div class="launch-price-box">AMG Line Plus (956): 7,600,000원</div>
-                <ul class="launch-option-list">
-                  <li>AMG 라인 플러스 (956)</li>
-                  <li>Digital Extra: 리어 액슬 스티어링(10°) (216)</li>
-                  <li>라디에이터 그릴, 다크 크롬 (B29)</li>
-                  <li>나이트 패키지 (P55)</li>
-                  <li>단열 틴티드 글래스 삭제 (U50)</li>
-                  <li>20인치 AMG 크로스 스포크 경량 알로이 휠 (RTX)</li>
-                  <li>하이-글로스 실버 메탈릭 믹스드 화이버 트림 (73H)</li>
-                  <li>MANUFAKTUR 오팔라이트 화이트 브라이트 (885U)</li>
-                  <li>나파 가죽, AMG 라인 플러스, 블랙 (803A)</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="launch-detail-card">
-          <span class="launch-badge">140대 한정 생산</span>
-          <h4>S 500 4M L Launch Edition "MANUFAKTUR 스파클링 블랙 에디션"</h4>
-          <p class="launch-disclaimer">해당 차량에 적용된 코드 944U, P34, 525A, 65U, U04, 735, B05는 별도로 선택이 불가능한, 오직 런치 에디션만을 위한 옵션 사양입니다.</p>
-
-          <div class="launch-cols">
-            <div>
-              <div class="launch-col-title">외장 하이라이트</div>
-              <div class="launch-col-body">
-                <div class="launch-item-label">MANUFAKTUR 스파클링 블랙 (944U)</div>
-                <div class="launch-img-box launch-img-box-tall">
-                  <img src="images/launch2-exterior.jpg" alt="MANUFAKTUR 스파클링 블랙 에디션 외장" class="clickable-img" onerror="this.style.display='none'">
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="launch-col-title">내장 하이라이트</div>
-              <div class="launch-col-body">
-                <div class="launch-item-label">익스클루시브 나파 가죽, 마카오 베이지/마그마 그레이 (525A)</div>
-                <div class="launch-img-box">
-                  <img src="images/launch2-interior-seat.jpg" alt="MANUFAKTUR 스파클링 블랙 에디션 시트" class="clickable-img" onerror="this.style.display='none'">
-                </div>
-                <div class="launch-item-label" style="margin-top:0.8rem;">유광 월넛 우드 트림, 블랙 (H37)</div>
-                <div class="launch-img-box">
-                  <img src="images/launch2-interior-trim.jpg" alt="MANUFAKTUR 스파클링 블랙 에디션 트림" class="clickable-img" onerror="this.style.display='none'">
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="launch-col-title">22316412-KR1 (140대)</div>
-              <div class="launch-col-body">
-                <p style="font-size:0.82rem; color:var(--silver); line-height:1.7;">
-                  외장 - MANUFAKTUR 스파클링 블랙 (944U)<br>
-                  내장 - 익스클루시브 나파 가죽, 마카오 베이지/마그마 그레이 (525A)
-                </p>
-                <div class="launch-price-box">Exclusive Package (P34): 19,000,000원</div>
-                <ul class="launch-option-list">
-                  <li>익스클루시브 패키지 (P34)</li>
-                  <li>마이크로컷 루프 라이닝, 마카오 베이지 (65U)</li>
-                  <li>플로어 매트 (U04)</li>
-                  <li>익스클루시브 트림 패키지 (735)</li>
-                  <li>크롬 핸들 및 스테인리스 스틸로 마감된 로딩 실 (B05)</li>
-                  <li>MANUFAKTUR 스파클링 블랙 (944U)</li>
-                  <li>익스클루시브 나파 가죽, 마카오 베이지/마그마 그레이 (525A)</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- 9. MAYBACH SPECIAL SECTION -->
-    <section>
+    <section id="maybach">
       <span class="sec-label">MAYBACH EXCLUSIVE</span>
       <h2 class="sec-title">Mercedes-Maybach S-Class MY27</h2>
       <p class="sec-desc">최상위 프리미엄 가치를 지닌 마이바흐 라인업만의 독보적 요소입니다.</p>
@@ -2901,10 +3126,10 @@
     </section>
 
     <!-- 10. MODEL & OPTION GUIDE -->
-    <section>
+    <section id="options">
       <span class="sec-label">MODEL & OPTION GUIDE</span>
       <h2 class="sec-title">국내 출시 모델 & 옵션 구성</h2>
-      <p class="sec-desc">전 모델 4MATIC 기본 적용 · LWB 4종 · SWB 2종 도입 예정</p>
+      <p class="sec-desc">전 모델 4MATIC 기본 적용 · LWB 4종 · SWB 2종 출시</p>
 
       <!-- 모델별 세부 사양 비교 -->
       <div style="margin-bottom:0.6rem; font-size:0.75rem; color:var(--gold); font-family:'MBK CorpoA',serif; letter-spacing:2px; padding-bottom:0.4rem; border-bottom:1px solid rgba(199,203,209,0.25);">모델별 세부 사양 비교</div>
@@ -3169,6 +3394,20 @@
       </div>
     </section>
 
+    <!-- CATALOG DOWNLOAD -->
+    <section id="catalog">
+      <span class="sec-label">CATALOG</span>
+      <h2 class="sec-title">공식 카탈로그</h2>
+      <div class="catalog-card">
+        <div class="catalog-text">
+          <strong>The new S-Class 공식 카탈로그</strong>
+          <span>메르세데스-벤츠 코리아 공식 카탈로그 (2026.09.14 기준) · PDF</span>
+        </div>
+        <a class="catalog-btn" href="https://www.mercedes-benz.co.kr/content/dam/south-korea/passenger-cars/model/catalog/2026/Mercedes-Benz_S-Class_Catalogue_20260914.pdf" target="_blank" rel="noopener noreferrer">카탈로그 PDF 보기</a>
+      </div>
+      <p class="table-note">※ 메르세데스-벤츠 코리아 공식 사이트로 연결됩니다.</p>
+    </section>
+
     <!-- 어드바이저 소개 -->
     <section class="advisor-pitch">
       <div class="advisor-pitch-img">
@@ -3195,15 +3434,14 @@
       </div>
     </section>
 
-    <!-- 최하단 상담 안내 & 사전계약 CTA 카드 -->
-    <section class="consult-card">
+    <!-- 최하단 상담 안내 CTA 카드 -->
+    <section class="consult-card" id="contact">
       <div class="consult-header">
         <div class="consult-title-row">
-          <h3>맞춤형 견적 및 시승 상담 안내 (사전계약 진행 중)</h3>
+          <h3>맞춤형 견적 및 시승 상담 안내</h3>
         </div>
         <p class="consult-subtext">
-          전국 최고의 조건과 맞춤 금융 설계를 친절하게 도와드리겠습니다.<br>
-          • <strong>사전계약 조건:</strong> 계약금 500만원 (전액 환불 가능) | 2026년 8월 공식 출시
+          전국 최고의 조건과 맞춤 금융 설계를 친절하게 도와드리겠습니다.
         </p>
       </div>
 
@@ -3229,7 +3467,7 @@
   <footer>
     <div class="container footer-content">
       <div class="footer-disclaimer">
-        <p>※ 예상 가격대·사양·주행거리·전비는 참고용으로 실제 국내 출시 모델 및 옵션 구성과 상이할 수 있습니다.</p>
+        <p>※ 가격·사양·옵션 구성은 참고용이며 출고 시점의 공식 가격표 및 정책에 따라 달라질 수 있습니다.</p>
         <p>※ 이미지는 참고용이며 실제 차량과 다를 수 있습니다.</p>
       </div>
       <div class="footer-copyright">
@@ -3298,5 +3536,215 @@
     })();
   </script>
 
+
+  <!-- =========================================================
+       COLOR CUSTOMIZER JS
+       ========================================================= -->
+  <script>
+    (function () {
+      // 외장 페인트 (코드 + U)
+      var EXT = {
+        197: { n: '옵시디안 블랙', h: '#15181c', add: 0 },
+        831: { n: '그라파이트 그레이', h: '#454952', add: 0 },
+        595: { n: '노틱 블루', h: '#28384c', add: 0 },
+        715: { n: '웜 그레이', h: '#8b857a', add: 0 },
+        922: { n: '하이 테크 실버', h: '#c3c7ca', add: 0 },
+        885: { n: 'MANUFAKTUR 오팔라이트 화이트 브라이트', h: '#edeff0', add: 218 }
+      };
+
+      // 인테리어 시트 (코드 + A) — h: 투톤이면 [메인, 서브]
+      var INT = {
+        213: { n: '가죽, 블랙', h: ['#1c1c1c'], add: 0 },
+        214: { n: '가죽, 헤이즐넛 브라운 / 블랙', h: ['#6b4a2f', '#1c1c1c'], add: 73 },
+        215: { n: '가죽, 마키아토 베이지 / 블랙', h: ['#c4a986', '#1c1c1c'], add: 73 },
+        823: { n: '나파 가죽, 블랙', h: ['#1c1c1c'], add: 0 },
+        824: { n: '나파 가죽, 브라운 / 블랙', h: ['#5a3d28', '#1c1c1c'], add: 73 },
+        825: { n: '나파 가죽, 마키아토 베이지 / 마그마 그레이', h: ['#c4a986', '#6e7075'], add: 73 },
+        523: { n: '익스클루시브 나파, 블랙', h: ['#1c1c1c'], add: 0 },
+        524: { n: '익스클루시브 나파, 브라운 / 블랙', h: ['#5a3d28', '#1c1c1c'], add: 0 },
+        525: { n: '익스클루시브 나파, 마키아토 베이지 / 마그마 그레이', h: ['#c4a986', '#6e7075'], add: 0 }
+      };
+
+      // 모델별 선택 가능 색상
+      var MODELS = [
+        { n: 'S 350 d 4M',            ext: [197, 831, 595, 715, 885],      int: [213, 214, 215] },
+        { n: 'S 450 4M',              ext: [197, 831, 595, 715, 885],      int: [213, 214, 215] },
+        { n: 'S 450 4M L Exclusive',  ext: [197, 831, 595, 715, 885],      int: [213, 214, 215] },
+        { n: 'S 450 4M L AMG Line',   ext: [197, 831, 715, 595, 922],      int: [823, 824, 825] },
+        { n: 'S 500 4M L',            ext: [197, 831, 715, 595, 922, 885], int: [823, 824, 825] },
+        { n: 'S 580 4M L',            ext: [197, 595],                     int: [523, 524, 525] }
+      ];
+
+      var EXT_ALL = [197, 831, 595, 715, 922, 885];
+
+      // 인테리어 트림 (우드/라커) — def: 기본 적용 모델
+      var TRIMS = [
+        { c: '22H', n: '앤트러사이트 오픈-포어 우드', bg: 'repeating-linear-gradient(90deg,#2a2a2d 0 3px,#3b3b3f 3px 5px)', def: 'S 350 d · S 450' },
+        { c: '23H', n: '오픈-포어 브라운 우드 · 피시본 패턴', bg: 'repeating-linear-gradient(45deg,#6b4c33 0 3px,#563c28 3px 6px)', def: 'S 450 L Exclusive · AMG Line' },
+        { c: 'H37', n: '유광 월넛 우드, 블랙', bg: 'linear-gradient(135deg,#6e4727,#3a2312)', def: 'S 500 L' },
+        { c: 'H17', n: 'MANUFAKTUR 플로잉 라인 피아노 라커, 블랙', bg: 'linear-gradient(135deg,#222225,#050506)', def: 'S 580 L' },
+        { c: 'H73', n: '하이-글로스 실버 메탈릭 믹스드 파이버', bg: 'linear-gradient(135deg,#d6d9dd,#8a9097)', def: '' }
+      ];
+      // 모델 탭 순서별 기본 트림
+      var DEFAULT_TRIM = ['22H', '22H', '23H', '23H', 'H37', 'H17'];
+
+      var tabsEl = document.getElementById('color-model-tabs');
+      var extPalette = document.getElementById('ext-palette');
+      var intPalette = document.getElementById('int-palette');
+      var extText = document.getElementById('ext-selected-text');
+      var intText = document.getElementById('int-selected-text');
+      var totalText = document.getElementById('total-color-text');
+      var extImg = document.getElementById('ext-preview-img');
+      var intImg = document.getElementById('int-preview-img');
+      var trimPalette = document.getElementById('trim-palette');
+      var trimText = document.getElementById('trim-selected-text');
+      var trimImg = document.getElementById('trim-preview-img');
+      if (!tabsEl || !extPalette || !intPalette || !trimPalette) return;
+
+      var state = { model: 0, ext: 197, int: 213, trim: '22H' };
+
+      function intBg(h) {
+        return h.length === 1 ? h[0] : 'linear-gradient(135deg,' + h[0] + ' 50%,' + h[1] + ' 50%)';
+      }
+      function addLabel(v) { return v > 0 ? ' · 추가비용 ' + v + '만원' : ''; }
+
+      function setImg(el, src) {
+        el.style.display = 'block';
+        el.src = src;
+      }
+
+      function renderChips(container, codes, data, key, suffix, isInt) {
+        container.innerHTML = '';
+        codes.forEach(function (code) {
+          var d = data[code];
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'color-chip' + (state[key] === code ? ' active' : '');
+          b.style.background = isInt ? intBg(d.h) : d.h;
+          b.title = d.n + ' (' + code + suffix + ')' + addLabel(d.add);
+          b.setAttribute('aria-label', b.title);
+          b.addEventListener('click', function () {
+            state[key] = code;
+            update();
+          });
+          container.appendChild(b);
+        });
+      }
+
+      function renderTrims() {
+        trimPalette.innerHTML = '';
+        TRIMS.forEach(function (t) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'color-chip' + (state.trim === t.c ? ' active' : '');
+          b.style.background = t.bg;
+          b.title = t.n + ' (' + t.c + ')';
+          b.setAttribute('aria-label', b.title);
+          b.addEventListener('click', function () {
+            state.trim = t.c;
+            update();
+          });
+          trimPalette.appendChild(b);
+        });
+      }
+
+      function renderTabs() {
+        tabsEl.innerHTML = '';
+        MODELS.forEach(function (m, i) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'color-model-tab' + (state.model === i ? ' active' : '');
+          b.textContent = m.n;
+          b.setAttribute('role', 'tab');
+          b.setAttribute('aria-selected', state.model === i ? 'true' : 'false');
+          b.addEventListener('click', function () {
+            state.model = i;
+            state.trim = DEFAULT_TRIM[i];
+            update();
+          });
+          tabsEl.appendChild(b);
+        });
+      }
+
+      function update() {
+        var m = MODELS[state.model];
+        // 시트는 선택해 둔 종류가 이 모델에 없으면 첫 번째로 (외장은 전 라인업 공통이라 유지)
+        if (m.int.indexOf(state.int) < 0) state.int = m.int[0];
+
+        renderTabs();
+        renderChips(extPalette, EXT_ALL, EXT, 'ext', 'U', false);
+        renderChips(intPalette, m.int, INT, 'int', 'A', true);
+        renderTrims();
+
+        var e = EXT[state.ext], i = INT[state.int];
+        extText.textContent = '외장: ' + e.n + ' (' + state.ext + 'U)' + addLabel(e.add);
+        intText.textContent = '내장: ' + i.n + ' (' + state.int + 'A)' + addLabel(i.add);
+        setImg(extImg, 'images/ext-' + state.ext + '.jpg');
+        setImg(intImg, 'images/int-' + state.int + '.jpg');
+
+        var t = TRIMS.filter(function (x) { return x.c === state.trim; })[0];
+        var isDefault = state.trim === DEFAULT_TRIM[state.model];
+        trimText.textContent = '트림: ' + t.n + ' (' + t.c + ')' +
+          (isDefault ? ' · 선택 모델 기본 적용' : (t.def ? ' · 기본 적용 모델: ' + t.def : ''));
+        setImg(trimImg, 'images/trim-' + t.c + '.jpg');
+
+        var total = e.add + i.add;
+        totalText.textContent = m.n + ' · ' + e.n + ' (' + state.ext + 'U) / ' + i.n + ' (' + state.int + 'A) / ' + t.n + ' (' + t.c + ')' +
+          (total > 0 ? ' · 색상 추가비용 합계 ' + total + '만원' : '');
+      }
+
+      update();
+    })();
+  </script>
+
+
+  <!-- =========================================================
+       PAGE NAV JS
+       ========================================================= -->
+  <script>
+    (function () {
+      var header = document.querySelector('header');
+      var nav = document.getElementById('page-nav');
+      if (!header || !nav) return;
+      var inner = nav.querySelector('.page-nav-inner');
+      var links = Array.prototype.slice.call(nav.querySelectorAll('a'));
+      var targets = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+
+      function setOffsets() {
+        var root = document.documentElement.style;
+        root.setProperty('--header-h', header.offsetHeight + 'px');
+        root.setProperty('--nav-h', nav.offsetHeight + 'px');
+      }
+      setOffsets();
+      window.addEventListener('resize', setOffsets);
+      window.addEventListener('load', setOffsets);
+
+      var current = -2;
+      function onScroll() {
+        var line = header.offsetHeight + nav.offsetHeight + 24;
+        var idx = -1;
+        targets.forEach(function (t, i) {
+          if (t && t.getBoundingClientRect().top <= line) idx = i;
+        });
+        // 페이지 맨 아래에 닿으면 마지막 메뉴를 선택 (짧은 마지막 섹션 대응)
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) idx = links.length - 1;
+        if (idx === current) return;
+        current = idx;
+        links.forEach(function (a, i) { a.classList.toggle('active', i === idx); });
+        if (idx >= 0) {
+          var a = links[idx];
+          inner.scrollTo({ left: a.offsetLeft - (inner.clientWidth - a.offsetWidth) / 2, behavior: 'smooth' });
+        }
+      }
+
+      var ticking = false;
+      window.addEventListener('scroll', function () {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function () { onScroll(); ticking = false; });
+      }, { passive: true });
+      onScroll();
+    })();
+  </script>
 </body>
 </html>
